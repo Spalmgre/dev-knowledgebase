@@ -4,6 +4,7 @@
 
 Agentti (Cascade/Windsurf) ei aja `git add -A && git commit && git push` -komentoa
 automaattisesti, vaikka:
+
 - globaali git-automaatiosääntö on kirjattu `workflow-rules.md`
 - sääntö on agentin muistissa
 - agentti merkitsee komennon automaattisesti ajettavaksi (`SafeToAutoRun=true`)
@@ -20,33 +21,42 @@ Tämä on tahallinen turvarajoitus: agentti ei voi itse ohittaa sitä, eikä mik
 muistiin tai knowledgebaseen kirjattu sääntö voi sitä kumota. Vain käyttäjä voi
 sallia komennot asetuksista — kertaluonteisesti.
 
-## Ratkaisu (käyttäjä tekee kerran)
+## Ratkaisu (käyttäjä tekee kerran) — VARMISTETTU TOIMIVAKSI 2026-06-23
 
-### Mistä löydän Allow Listin (Windsurf)
+TÄRKEÄÄ: Cascaden komento-allowlist EI ole tavallisessa VS Code Settings -haussa.
+Hakusana "allow list" VS Code -asetuksissa näyttää vain Extensions/Terminal/Fonts
+-tuloksia — ne ovat VÄÄRIÄ. Allowlist on Windsurfin omassa asetuspaneelissa.
 
-Kaksi vaihtoehtoa:
+### Tarkka polku (testattu, toimii)
 
-**A) Turbo Mode (nopein, sallii kaiken auto-runin)**
-1. Avaa Cascade-paneeli (chat oikealla)
-2. Paneelin **alareunassa** syöttökentän vieressä on tila-valitsin:
-   `Chat` / `Write` ja sen lähellä komentojen suoritustila
-3. Vaihda tilaksi **Turbo** (tunnetaan myös "auto-execute commands")
-4. Tämän jälkeen kaikki agentin turvalliseksi merkitsemät komennot ajetaan ilman nappia
+1. Klikkaa ruudun **oikean alakulman statuspalkista** tekstiä **`Devin - Settings`**
+   (se on `Pro`-tekstin ja `✓ Prettier`-tekstin välissä)
+2. Avautuu Cascade-asetusvalikko. Klikkaa alhaalta **`Advanced Settings`**
+3. Avautuu asetussivu. Vasemmasta valikosta osio **`Cascade`** → **`Configuration`**
+4. Kohdassa **Allow list** ("Patterns for commands that are always auto-executed")
+   klikkaa **`Add`**
+5. Kirjoita riviksi:
 
-**B) Allow List (turvallisempi, vain git sallitaan)**
-1. Avaa **Windsurf Settings**:
-   - Valikko: `File → Preferences → Settings` TAI pikanäppäin `Ctrl + ,`
-   - TAI Windsurf-kuvake vasemmasta alakulmasta → **Advanced Settings**
-2. Hae hakukentästä: **`allow list`** tai **`Cascade Terminal`**
-3. Etsi osio **Cascade → Terminal → Allow List** (ja Deny List)
-4. Lisää allowlistiin komentojen alkuosat:
-   - `git add`
-   - `git commit`
-   - `git push`
-5. Tallenna. Nämä komennot ajetaan jatkossa automaattisesti ilman hyväksyntää;
-   muut potentiaalisesti vaaralliset komennot pyytävät edelleen vahvistuksen.
+   ```
+   git *
+   ```
 
-Suositus: **B (Allow List)** — turvallisin, koska vain git menee läpi.
+   ('\*' lopussa = prefix matching → kattaa git add / commit / push / kaikki git-komennot)
+
+6. Valmis. Ei erillistä tallennusnappia.
+
+Lisäksi: varmista että samalla Cascade-sivulla **`Auto execution`** = **`Auto`**
+(ei `Off`). Allowlist toimii Auto-tilassa.
+
+### Vaihtoehto: täysi automaatio
+
+`Auto execution` → **`Turbo`** ajaa KAIKKI komennot automaattisesti (myös vaaralliset
+kuten tiedostojen poisto). Ei suositella; allowlist `git *` on turvallisempi.
+
+### Vahvistus
+
+Testattu 2026-06-23: `git add -A && git commit && git push` ajautui läpi
+ILMAN "Run"-napin painamista heti kun `git *` lisättiin allowlistiin.
 
 ## Konteksti
 
