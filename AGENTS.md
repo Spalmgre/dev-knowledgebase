@@ -17,6 +17,7 @@ Tämä on keskitetty osaamispankki kaikille projekteille. Kaikki toimivat ratkai
 ## Kun käyttäjä pyytää lisäämään globaaliksi
 
 **Käyttäjä saattaa sanoa (tunnista nämä):**
+
 - "Tämä on globaalisti käytettävä"
 - "Lisää knowledgebaseen"
 - "Toista tämä muissa projekteissa"
@@ -25,6 +26,7 @@ Tämä on keskitetty osaamispankki kaikille projekteille. Kaikki toimivat ratkai
 - "Dokumentoi tämä"
 
 **Toimenpiteet:**
+
 1. Luo tiedosto `04-issues-resolved/[kuvaava-nimi]-[YYYY-MM-DD].md`
 2. Kirjaa seuraavat kohdat:
    - **Ongelma**: Mitä yritettiin ratkaista
@@ -36,6 +38,7 @@ Tämä on keskitetty osaamispankki kaikille projekteille. Kaikki toimivat ratkai
 5. Jatka projektityötä normaalisti
 
 **Esimerkki käyttäjän pyynnöstä:**
+
 ```
 Käyttäjä: "Tämä Supabase RLS-ratkaisu pitää olla kaikissa projekteissa"
 → Luo: 04-issues-resolved/supabase-rls-policy-2025-06-16.md
@@ -58,13 +61,13 @@ Käyttäjä: "Tämä Supabase RLS-ratkaisu pitää olla kaikissa projekteissa"
 
 ## Hakemistorakenne (tarkista aina oikea kansio)
 
-| Kansio | Sisältö |
-|--------|---------|
-| `01-workflows/` | Vaiheittaiset prosessit (miten tehdään) |
-| `02-templates/` | Kopioitavat projektipohjat |
-| `03-configs/` | Toimivat asetukset ja määritykset |
-| `04-issues-resolved/` | Ratkaistut ongelmat ja ratkaisut |
-| `05-project-index/` | Projektikohtaiset tiedot ja linkit |
+| Kansio                | Sisältö                                 |
+| --------------------- | --------------------------------------- |
+| `01-workflows/`       | Vaiheittaiset prosessit (miten tehdään) |
+| `02-templates/`       | Kopioitavat projektipohjat              |
+| `03-configs/`         | Toimivat asetukset ja määritykset       |
+| `04-issues-resolved/` | Ratkaistut ongelmat ja ratkaisut        |
+| `05-project-index/`   | Projektikohtaiset tiedot ja linkit      |
 
 ---
 
@@ -73,13 +76,15 @@ Käyttäjä: "Tämä Supabase RLS-ratkaisu pitää olla kaikissa projekteissa"
 - **Uusi projekti**: `01-workflows/new-project-setup.md`
 - **Supabase OAuth**: `03-configs/supabase/oauth-providers.md`
 - **Vercel deployment**: `03-configs/vercel/project-settings.md`
-- **Vercel ei deployaa**: `04-issues-resolved/vercel-github-trigger.md`
+- **Vercel ei deployaa**: `04-issues-resolved/vercel-github-trigger-2025-06-16.md`
+- **Git push -auto ei toimi**: `04-issues-resolved/git-push-vaatii-ide-allowlist-2026-06-23.md`
 
 ---
 
 ## DOX-yhteensopivuus
 
 Tämä knowledgebase noudattaa DOX-sääntöjä:
+
 - Jokaisella kansiolla on oma `AGENTS.md`
 - Alikansioiden säännöt täydentävät näitä sääntöjä
 - Ristiriitatilanteessa spesifimpi sääntö voittaa

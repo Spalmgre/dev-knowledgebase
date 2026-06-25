@@ -11,12 +11,11 @@ Tämä kansio sisältää vaiheittaiset prosessit ja työnkulut.
 
 ## Saatavilla olevat workflowt
 
-| Tiedosto | Käyttötarkoitus |
-|----------|-----------------|
-| `new-project-setup.md` | Uuden projektin perustaminen tyhjästä |
-| `supabase-oauth-setup.md` | OAuth-kirjautumisen asennus Supabaseen |
-| `vercel-deployment-fix.md` | Vercel deploymentin korjaus |
-| `vercel-github-troubleshoot.md` | Vercel + GitHub ongelmien debug |
+| Tiedosto                        | Käyttötarkoitus                                             |
+| ------------------------------- | ----------------------------------------------------------- |
+| `new-project-setup.md`          | Uuden projektin perustaminen tyhjästä                       |
+| `supabase-oauth-setup.md`       | OAuth-kirjautumisen asennus Supabaseen                      |
+| `vercel-github-troubleshoot.md` | Vercel + GitHub ongelmien debug (myös deploymentin korjaus) |
 
 ## Kun lisäät uuden workflowin
 

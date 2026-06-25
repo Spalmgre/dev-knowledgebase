@@ -7,12 +7,14 @@ Tämä workflow luo uuden projektin pohjasta ja konfiguroi kaikki tarvittavat pa
 ## Vaihe 1: Projektin perustaminen
 
 ### Toimenpiteet:
+
 1. Luo uusi kansio: `C:\TYO\GitHub Local\[projekti-nimi]`
 2. Kopioi pohja `02-templates/nextjs-supabase/` tähän kansioon
 3. Avaa kansio VS Code:ssa uutena ikkunana
 4. Luo `README.md` projektin kuvauksella
 
 ### Tarkistus:
+
 - [ ] Kansio luotu ja pohja kopioitu
 - [ ] VS Code avattu oikeassa kansiossa
 - [ ] README.md luotu
@@ -22,6 +24,7 @@ Tämä workflow luo uuden projektin pohjasta ja konfiguroi kaikki tarvittavat pa
 ## Vaihe 2: GitHub-repositorion luonti
 
 ### Toimenpiteet:
+
 1. Mene https://github.com/new
 2. Anna repository-nimi (sama kuin kansio)
 3. Valitse "Private" (tai "Public" jos tarvitaan)
@@ -30,6 +33,7 @@ Tämä workflow luo uuden projektin pohjasta ja konfiguroi kaikki tarvittavat pa
 6. Kopioi komento: `git remote add origin https://github.com/[user]/[repo].git`
 
 ### Tarkistus:
+
 - [ ] GitHub-repo luotu
 - [ ] Remote lisätty paikalliseen projektiin
 
@@ -38,6 +42,7 @@ Tämä workflow luo uuden projektin pohjasta ja konfiguroi kaikki tarvittavat pa
 ## Vaihe 3: Git-initialisointi ja ensimmäinen commit
 
 ### Toimenpiteet:
+
 ```bash
 git init
 git add .
@@ -47,6 +52,7 @@ git push -u origin main
 ```
 
 ### Tarkistus:
+
 - [ ] `git status` näyttää "nothing to commit"
 - [ ] GitHubissa näkyy tiedostot
 
@@ -55,6 +61,7 @@ git push -u origin main
 ## Vaihe 4: Supabase-projektin luonti
 
 ### Toimenpiteet:
+
 1. Mene https://supabase.com/dashboard
 2. Luo uusi organisaatio (jos ei ole) tai valitse olemassaoleva
 3. Click "New Project"
@@ -63,6 +70,7 @@ git push -u origin main
 6. Odota että projekti on valmis (n. 1-2 min)
 
 ### Tarkistus:
+
 - [ ] Supabase-projekti näkyy dashboardissa
 - [ ] Project URL ja API keys saatavilla Settings → API
 
@@ -71,6 +79,7 @@ git push -u origin main
 ## Vaihe 5: Supabase OAuth-konfiguraatio
 
 ### Toimenpiteet:
+
 Lue ja seuraa: `03-configs/supabase/oauth-providers.md`
 
 1. Mene Authentication → Providers
@@ -79,6 +88,7 @@ Lue ja seuraa: `03-configs/supabase/oauth-providers.md`
 4. Kopioi client ID ja secret jokaiselle
 
 ### Tarkistus:
+
 - [ ] Providerit näkyvät "Enabled"
 - [ ] Testikirjautuminen toimii (Authentication → Users näyttää uuden käyttäjän)
 
@@ -87,6 +97,7 @@ Lue ja seuraa: `03-configs/supabase/oauth-providers.md`
 ## Vaihe 6: Environment-muuttujat
 
 ### Toimenpiteet:
+
 1. Kopioi `.env.example` → `.env.local`
 2. Lisää Supabase URL ja anon key:
    ```
@@ -96,6 +107,7 @@ Lue ja seuraa: `03-configs/supabase/oauth-providers.md`
 3. Lisää muut tarvittavat muuttujat
 
 ### Tarkistus:
+
 - [ ] `.env.local` .gitignoressa (turvallisuus!)
 - [ ] Sovellus käynnistyy ilman virheitä: `npm run dev`
 
@@ -104,6 +116,7 @@ Lue ja seuraa: `03-configs/supabase/oauth-providers.md`
 ## Vaihe 7: Vercel deployment
 
 ### Toimenpiteet:
+
 Lue ja seuraa: `03-configs/vercel/project-settings.md`
 
 1. Mene https://vercel.com/dashboard
@@ -116,21 +129,24 @@ Lue ja seuraa: `03-configs/vercel/project-settings.md`
 6. Deploy
 
 ### Tarkistus:
+
 - [ ] Vercel näyttää "Production Deployment" vihreänä
 - [ ] URL toimii ja ohjaa oikein
 
-**Jos ei toimi** → lue `04-issues-resolved/vercel-github-trigger.md`
+**Jos ei toimi** → lue `04-issues-resolved/vercel-github-trigger-2025-06-16.md`
 
 ---
 
 ## Vaihe 8: GitHub + Vercel integraation tarkistus
 
 ### Toimenpiteet:
+
 1. Tee pieni muutos koodiin (esim. päivitä README)
 2. Commit ja push: `git add . && git commit -m "Test push" && git push`
 3. Tarkista Vercel dashboard → Deployments
 
 ### Tarkistus:
+
 - [ ] Push triggeröi automaattisen deploymentin Vercelissä
 - [ ] Uusi versio näkyy production URL:ssa
 
@@ -141,6 +157,7 @@ Lue ja seuraa: `03-configs/vercel/project-settings.md`
 ## Lopputarkistus
 
 Kaiken pitäisi nyt toimia:
+
 - [ ] Paikallinen kehitys: `npm run dev` toimii
 - [ ] Git push triggeröi Vercel deploymentin
 - [ ] OAuth-kirjautuminen toimii

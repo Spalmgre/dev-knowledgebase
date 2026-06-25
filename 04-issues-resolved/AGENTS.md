@@ -12,6 +12,7 @@ Tämä kansio sisältää ratkaistut ongelmat ja niiden ratkaisut.
 ## Dokumenttien rakenne
 
 Jokaisessa dokumentissa pitää olla:
+
 1. **Ongelma**: Mitä yritettiin ratkaista
 2. **Oireet**: Miten ongelma ilmeni
 3. **Juurisyy**: Mikä aiheutti ongelman (jos tiedossa)
@@ -28,6 +29,7 @@ Jokaisessa dokumentissa pitää olla:
 
 ## Olemassa olevat ratkaisut
 
-| Tiedosto | Ongelma |
-|----------|---------|
-| `vercel-github-trigger.md` | Vercel ei triggeröitynyt GitHub-pushista |
+| Tiedosto                                      | Ongelma                                                |
+| --------------------------------------------- | ------------------------------------------------------ |
+| `vercel-github-trigger-2025-06-16.md`         | Vercel ei triggeröitynyt GitHub-pushista               |
+| `git-push-vaatii-ide-allowlist-2026-06-23.md` | Git push -auto vaatii Windsurfin allowlistin (`git *`) |
