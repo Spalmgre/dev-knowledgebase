@@ -11,11 +11,12 @@ Tämä kansio sisältää vaiheittaiset prosessit ja työnkulut.
 
 ## Saatavilla olevat workflowt
 
-| Tiedosto                        | Käyttötarkoitus                                             |
-| ------------------------------- | ----------------------------------------------------------- |
-| `new-project-setup.md`          | Uuden projektin perustaminen tyhjästä                       |
-| `supabase-oauth-setup.md`       | OAuth-kirjautumisen asennus Supabaseen                      |
-| `vercel-github-troubleshoot.md` | Vercel + GitHub ongelmien debug (myös deploymentin korjaus) |
+| Tiedosto                        | Käyttötarkoitus                                                     |
+| ------------------------------- | ------------------------------------------------------------------- |
+| `new-project-setup.md`          | Uuden projektin perustaminen tyhjästä (Next.js-pohja)               |
+| `expo-vercel-web-deploy.md`     | Expo / react-native-web -sovelluksen julkaisu web-PWA:na Vercelillä |
+| `supabase-oauth-setup.md`       | OAuth-kirjautumisen asennus Supabaseen                              |
+| `vercel-github-troubleshoot.md` | Vercel + GitHub ongelmien debug (myös deploymentin korjaus)         |
 
 ## Kun lisäät uuden workflowin
 

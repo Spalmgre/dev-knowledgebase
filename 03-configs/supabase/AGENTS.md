@@ -4,15 +4,17 @@ Toimivat Supabase-asetukset ja -määritykset.
 
 ## Saatavilla olevat tiedostot
 
-| Tiedosto | Sisältö |
-|----------|---------|
-| `oauth-providers.md` | GitHub & Google OAuth setup |
-| `rls-templates.sql` | Valmiit RLS-politiikkapohjat |
-| `schema-patterns.md` | Yleiset tietokantamallit |
+| Tiedosto                  | Sisältö                                                                |
+| ------------------------- | ---------------------------------------------------------------------- |
+| `oauth-providers.md`      | GitHub & Google OAuth setup                                            |
+| `rls-templates.sql`       | Valmiit RLS-politiikkapohjat                                           |
+| `schema-patterns.md`      | Yleiset tietokantamallit                                               |
+| `keep-alive-heartbeat.md` | Ilmaistason projektin pausetuksen esto (GitHub Action + Edge Function) |
 
 ## Käyttö
 
 Uudessa projektissa:
+
 1. Lue `oauth-providers.md` ja konfiguroi providerit
 2. Kopioi tarvittavat RLS-politiikat `rls-templates.sql` tiedostosta
 3. Suunnittele skeema `schema-patterns.md` avulla
