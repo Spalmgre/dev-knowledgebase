@@ -1,14 +1,62 @@
 # Supabase Keep-Alive Heartbeat (ilmaistason pausetuksen esto)
 
+> **PAKOLLINEN** kaikille Supabase free-tier -projekteille. Lisää heti kun projekti luodaan.
+
 Supabasen ilmaistaso **pausettaa projektin** ~7 päivän käyttämättömyyden jälkeen.
 Tämä kuvio pitää projektin hereillä ajastetulla pingillä GitHub Actionsista.
 
-> Lähde / referenssitoteutus: **Klack-Treeni** (`.github/workflows/supabase-heartbeat.yml`
-> + Supabase Edge Function `heartbeat`). Todettu toimivaksi 2026.
+---
+
+## Vaihtoehto A: Yksinkertainen (suositeltu)
+
+Suora ping Supabasen auth-endpointtiin — **ei vaadi Edge Functionia**.
+
+> Referenssitoteutus: **Klack-SaaS-Chat** (`.github/workflows/supabase-keep-alive.yml`). Todettu toimivaksi 2026-06-28.
+
+### GitHub Action (`.github/workflows/supabase-keep-alive.yml`)
+
+```yaml
+name: Supabase Keep Alive
+
+on:
+  schedule:
+    - cron: '0 6 */3 * *'  # Joka 3. päivä klo 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase
+        run: |
+          response=$(curl -s -o /dev/null -w "%{http_code}" \
+            "${{ secrets.SUPABASE_URL }}/auth/v1/health" \
+            -H "apikey: ${{ secrets.SUPABASE_ANON_KEY }}")
+          echo "Status: $response"
+          if [ "$response" != "200" ]; then
+            echo "::warning::Supabase ping failed with status $response"
+            exit 1
+          fi
+```
+
+### Vaiheet (Vaihtoehto A)
+
+1. Kopioi yllä oleva yml → `.github/workflows/supabase-keep-alive.yml`
+2. Repo → Settings → Secrets → Actions → lisää:
+   - `SUPABASE_URL` = `https://<PROJECT_REF>.supabase.co`
+   - `SUPABASE_ANON_KEY` = anon/public -avain (Supabase Dashboard → Settings → API → Publishable key)
+3. Actions → "Supabase Keep Alive" → Run workflow → tarkista vihreä ✅
 
 ---
 
-## Osat
+## Vaihtoehto B: Edge Function (kehittyneempi)
+
+Edge Function tekee kevyen DB-kyselyn — parempi kontrolli ja varmennus.
+
+> Referenssitoteutus: **Klack-Treeni** (`.github/workflows/supabase-heartbeat.yml`
+> + Supabase Edge Function `heartbeat`). Todettu toimivaksi 2026.
+
+### Osat
 
 1. **Supabase Edge Function** (`supabase/functions/heartbeat/`) joka tekee kevyen DB-kyselyn ja palauttaa 200.
 2. **GitHub Action** joka pingaa funktiota ajastetusti (cron) ja epäonnistuu jos status != 200.
