@@ -9,3 +9,18 @@ Git push tehdään automaattisesti ilman erillistä kysymistä, kun:
 Komento: `git add -A && git commit && git push`
 
 Tämä koskee kaikkia projekteja.
+
+## Deploy-lokien tarkistus
+
+Agentin on aina tarkistettava lokit itsenäisesti deployn jälkeen ilman käyttäjän erillistä pyyntöä.
+
+Firebase Functions: `firebase functions:log --only <funktio>`
+Yleinen tarkistus: `firebase functions:log`
+
+Tarkistus tehdään ennen tehtävän sulkemista. Jos lokeissa on virheitä, raportoi ne käyttäjälle ja korjaa ennen jatkoa.
+
+## Knowledgebase-muutosten automaattinen commit
+
+Aina kun dev-knowledgebase-kansion tiedostoja päivitetään, agentin on automaattisesti commitoitava ja pushattava muutokset GitHubiin ilman käyttäjän erillistä pyyntöä.
+
+Komento: `git add -A && git commit -m "docs: päivitä workflow-rules.md" && git push`
