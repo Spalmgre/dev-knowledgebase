@@ -24,6 +24,8 @@
 
 - [ ] `01-workflows/new-project-setup.md` käytetty projektin luonnissa
 - [ ] `03-configs/supabase/oauth-providers.md` mukana (jos Supabase käytössä)
+- [x] `03-configs/supabase/keep-alive-heartbeat.md` mukana (Supabase free-tier)
+- [x] `02-templates/github-actions/supabase-keep-alive.yml` kopioitu ja `HEARTBEAT_SECRET` lisätty
 - [ ] `03-configs/vercel/project-settings.md` mukana (jos Vercel käytössä)
 
 ### Dokumentoidut poikkeamat
@@ -63,7 +65,7 @@
 
 | Päivämäärä | Ongelma | Knowledgebase-dokumentti |
 |------------|---------|--------------------------|
-| | | |
+| 2026-07-06 | Supabase free-tier pausointi estetään DB-kyselyä tekevällä keep-alive workflowlla | `03-configs/supabase/keep-alive-heartbeat.md` |
 
 ---
 

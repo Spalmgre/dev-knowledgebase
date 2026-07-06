@@ -1,0 +1,21 @@
+name: Supabase Keep Alive
+
+on:
+  schedule:
+    - cron: '0 6 */3 * *'  # Joka 3. päivä klo 06:00 UTC
+  workflow_dispatch:        # Manuaalinen käynnistys testiin
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping keep-alive endpoint (real DB query)
+        run: |
+          response=$(curl -s -o /dev/null -w "%{http_code}" \
+            "https://<YOUR_VERCEL_DOMAIN>/api/keep-alive" \
+            -H "Authorization: Bearer ${{ secrets.HEARTBEAT_SECRET }}")
+          echo "Status: $response"
+          if [ "$response" != "200" ]; then
+            echo "::warning::Keep-alive ping failed with status $response"
+            exit 1
+          fi

@@ -23,8 +23,10 @@
 ### Noudatetut määritykset
 
 - [ ] `01-workflows/new-project-setup.md` käytetty
-- [ ] `03-configs/supabase/oauth-providers.md` mukana
-- [ ] `03-configs/vercel/project-settings.md` mukana
+- [ ] `03-configs/supabase/oauth-providers.md` mukana (jos Supabase käytössä)
+- [ ] `03-configs/supabase/keep-alive-heartbeat.md` mukana (jos Supabase free-tier)
+- [ ] `03-configs/vercel/project-settings.md` mukana (jos Vercel käytössä)
+- [ ] `02-templates/github-actions/supabase-keep-alive.yml` kopioitu ja `HEARTBEAT_SECRET` lisätty (jos Supabase free-tier)
 
 ### Dokumentoidut poikkeamat
 

@@ -2,18 +2,36 @@
 
 > **PAKOLLINEN** kaikille Supabase free-tier -projekteille. Lisää heti kun projekti luodaan.
 
+> ⚠️ **Huomio:** Pelkkä `/auth/v1/health` -ping ei riitä. Supabase laskee **todellisen tietokanta-aktiviteetin** (database queries). Käytä endpointtia joka tekee oikean DB-kyselyn.
+
 Supabasen ilmaistaso **pausettaa projektin** ~7 päivän käyttämättömyyden jälkeen.
 Tämä kuvio pitää projektin hereillä ajastetulla pingillä GitHub Actionsista.
 
 ---
 
-## Vaihtoehto A: Yksinkertainen (suositeltu)
+## Vaihtoehto A: Vercel / Next.js endpoint (suositeltu)
 
-Suora ping Supabasen auth-endpointtiin — **ei vaadi Edge Functionia**.
+Tee Next.js-sovellukseen endpoint joka tekee oikean DB-kyselyn, ja pingaa sitä GitHub Actionsista.
 
-> Referenssitoteutus: **Klack-SaaS-Chat** (`.github/workflows/supabase-keep-alive.yml`). Todettu toimivaksi 2026-06-28.
+> Referenssitoteutus: **Klack-SaaS-Chat** (`src/app/api/keep-alive/route.ts` + `.github/workflows/supabase-keep-alive.yml`). Todettu toimivaksi 2026-07-06.
 
-### GitHub Action (`.github/workflows/supabase-keep-alive.yml`)
+### 1. Endpoint (`src/app/api/keep-alive/route.ts`)
+
+```typescript
+import { NextResponse } from 'next/server';
+import { prisma } from '@/lib/prisma';
+
+export async function GET(request: Request) {
+  const secret = request.headers.get('authorization')?.replace('Bearer ', '') ?? '';
+  if (secret !== process.env.HEARTBEAT_SECRET) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+  await prisma.$queryRaw`SELECT 1`;
+  return NextResponse.json({ status: 'ok', timestamp: new Date().toISOString() });
+}
+```
+
+### 2. GitHub Action (`.github/workflows/supabase-keep-alive.yml`)
 
 ```yaml
 name: Supabase Keep Alive
@@ -27,25 +45,24 @@ jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - name: Ping Supabase
+      - name: Ping keep-alive endpoint (real DB query)
         run: |
           response=$(curl -s -o /dev/null -w "%{http_code}" \
-            "${{ secrets.SUPABASE_URL }}/auth/v1/health" \
-            -H "apikey: ${{ secrets.SUPABASE_ANON_KEY }}")
+            "https://<YOUR_VERCEL_DOMAIN>/api/keep-alive" \
+            -H "Authorization: Bearer ${{ secrets.HEARTBEAT_SECRET }}")
           echo "Status: $response"
           if [ "$response" != "200" ]; then
-            echo "::warning::Supabase ping failed with status $response"
+            echo "::warning::Keep-alive ping failed with status $response"
             exit 1
           fi
 ```
 
 ### Vaiheet (Vaihtoehto A)
 
-1. Kopioi yllä oleva yml → `.github/workflows/supabase-keep-alive.yml`
-2. Repo → Settings → Secrets → Actions → lisää:
-   - `SUPABASE_URL` = `https://<PROJECT_REF>.supabase.co`
-   - `SUPABASE_ANON_KEY` = anon/public -avain (Supabase Dashboard → Settings → API → Publishable key)
-3. Actions → "Supabase Keep Alive" → Run workflow → tarkista vihreä ✅
+1. Lisää endpoint sovellukseen
+2. Lisää `HEARTBEAT_SECRET` Vercelin ympäristömuuttujiin
+3. Lisää `HEARTBEAT_SECRET` GitHub Actions Secrets -sivulle
+4. Aja manuaalisesti Actions → Run workflow → tarkista vihreä ✅
 
 ---
 
