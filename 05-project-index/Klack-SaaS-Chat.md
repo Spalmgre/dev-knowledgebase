@@ -18,7 +18,7 @@
 ## Knowledgebase-yhteensopivuus
 
 **Knowledgebase-versio**: [Ei vielä merkitty - päivitä kun knowledgebase otetaan käyttöön]  
-**Viimeksi päivitetty**: 2025-06-16  
+**Viimeksi päivitetty**: 2026-07-09  
 
 ### Noudatetut määritykset
 
@@ -27,6 +27,8 @@
 - [x] `03-configs/supabase/keep-alive-heartbeat.md` mukana (Supabase free-tier)
 - [x] `02-templates/github-actions/supabase-keep-alive.yml` kopioitu ja `HEARTBEAT_SECRET` lisätty
 - [ ] `03-configs/vercel/project-settings.md` mukana (jos Vercel käytössä)
+- [ ] `03-configs/supabase/mcp-setup.md` mukana (jos MCP:tä käytetään Supabasen kanssa)
+- [ ] `03-configs/vercel/mcp-setup.md` mukana (jos MCP:tä käytetään Vercelin kanssa)
 
 ### Dokumentoidut poikkeamat
 
@@ -66,6 +68,7 @@
 | Päivämäärä | Ongelma | Knowledgebase-dokumentti |
 |------------|---------|--------------------------|
 | 2026-07-06 | Supabase free-tier pausointi estetään DB-kyselyä tekevällä keep-alive workflowlla | `03-configs/supabase/keep-alive-heartbeat.md` |
+| 2026-07-09 | Supabase & Vercel MCP -konfiguraatio puuttui knowledgebasesta | `03-configs/supabase/mcp-setup.md`, `03-configs/vercel/mcp-setup.md`, `04-issues-resolved/supabase-vercel-mcp-2026-07-09.md` |
 
 ---
 

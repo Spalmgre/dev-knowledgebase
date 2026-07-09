@@ -14,6 +14,8 @@ Tämä kansio sisältää vaiheittaiset prosessit ja työnkulut.
 | Tiedosto                        | Käyttötarkoitus                                                     |
 | ------------------------------- | ------------------------------------------------------------------- |
 | `new-project-setup.md`          | Uuden projektin perustaminen tyhjästä (Next.js-pohja)               |
+| `SYSTEM_INSTRUCTIONS.md`        | Käyttöohjeet kaikille agenteille kaikissa projekteissa              |
+| `workflow-rules.md`             | Git-automaatio, deploy-lokien tarkistus ja knowledgebase-auto-commit  |
 | `expo-vercel-web-deploy.md`     | Expo / react-native-web -sovelluksen julkaisu web-PWA:na Vercelillä |
 | `supabase-oauth-setup.md`       | OAuth-kirjautumisen asennus Supabaseen                              |
 | `vercel-github-troubleshoot.md` | Vercel + GitHub ongelmien debug (myös deploymentin korjaus)         |

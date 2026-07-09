@@ -12,9 +12,17 @@ Tämä kansio sisältää toimivat määritykset ja asetukset.
 
 | Kansio | Sisältö |
 |--------|---------|
-| `supabase/` | OAuth-asetukset, RLS-politiikat, skeemat |
-| `vercel/` | Project-asetukset, environment-muuttujat |
+| `supabase/` | OAuth-asetukset, RLS-politiikat, skeemat, MCP-konfiguraatio |
+| `vercel/` | Project-asetukset, environment-muuttujat, MCP-konfiguraatio |
 | `github/` | Actions workflowt, branch-suojaus |
+
+## Yleiset määritykset
+
+| Tiedosto | Sisältö |
+|----------|---------|
+| `ARCHITECTURE.md` | Yhtenäiset arkkitehtuurimallit kaikille projekteille |
+| `UI_UX_STANDARDS.md` | Design system, värit, typografia, komponentit, saavutettavuus |
+| `MCP_INTEGRATION.md` | MCP-palvelinten ja Skills-kehityksen yleisohjeet |
 
 ## Päivitysprosessi
 

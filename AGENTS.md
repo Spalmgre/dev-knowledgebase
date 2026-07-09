@@ -74,9 +74,16 @@ Käyttäjä: "Tämä Supabase RLS-ratkaisu pitää olla kaikissa projekteissa"
 ## Tärkeimmät viittausdokumentit
 
 - **Uusi projekti (Next.js)**: `01-workflows/new-project-setup.md`
+- **System instructions**: `01-workflows/SYSTEM_INSTRUCTIONS.md`
+- **Workflow rules**: `01-workflows/workflow-rules.md`
 - **Expo → Vercel web PWA**: `01-workflows/expo-vercel-web-deploy.md`
+- **Arkkitehtuuri**: `03-configs/ARCHITECTURE.md`
+- **UI/UX standardit**: `03-configs/UI_UX_STANDARDS.md`
+- **MCP integraatio**: `03-configs/MCP_INTEGRATION.md`
+- **Supabase MCP**: `03-configs/supabase/mcp-setup.md`
 - **Supabase OAuth**: `03-configs/supabase/oauth-providers.md`
 - **Supabase keep-alive**: `03-configs/supabase/keep-alive-heartbeat.md`
+- **Vercel MCP**: `03-configs/vercel/mcp-setup.md`
 - **Vercel deployment**: `03-configs/vercel/project-settings.md`
 - **Vercel ei deployaa**: `04-issues-resolved/vercel-github-trigger-2025-06-16.md`
 - **Git push -auto ei toimi**: `04-issues-resolved/git-push-vaatii-ide-allowlist-2026-06-23.md`

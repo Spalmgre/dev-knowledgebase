@@ -8,6 +8,7 @@ Toimivat Vercel-asetukset ja -määritykset.
 |----------|---------|
 | `project-settings.md` | Vercel-projektin perusasetukset |
 | `environment-variables.md` | Required env-muuttujat |
+| `mcp-setup.md` | MCP-integraatio tekoälyagenteille + suora REST API -varavaihtoehto |
 
 ## Käyttö
 
@@ -15,6 +16,7 @@ Uudessa projektissa:
 1. Lue `project-settings.md` ja konfiguroi asetukset
 2. Lisää kaikki env-muuttujat `environment-variables.md` listasta
 3. Testaa deployment
+4. Jos käytät tekoälyagentteja Vercelin hallintaan, lue `mcp-setup.md`
 
 ## Huomioitavaa
 

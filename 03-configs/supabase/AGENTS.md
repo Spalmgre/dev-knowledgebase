@@ -10,6 +10,7 @@ Toimivat Supabase-asetukset ja -määritykset.
 | `rls-templates.sql`       | Valmiit RLS-politiikkapohjat                                           |
 | `schema-patterns.md`      | Yleiset tietokantamallit                                               |
 | `keep-alive-heartbeat.md` | Ilmaistason projektin pausetuksen esto (GitHub Action + Edge Function) |
+| `mcp-setup.md`            | MCP-integraatio tekoälyagenteille + suora REST API -varavaihtoehto       |
 
 ## Käyttö
 
@@ -18,6 +19,7 @@ Uudessa projektissa:
 1. Lue `oauth-providers.md` ja konfiguroi providerit
 2. Kopioi tarvittavat RLS-politiikat `rls-templates.sql` tiedostosta
 3. Suunnittele skeema `schema-patterns.md` avulla
+4. Jos käytät tekoälyagentteja tietokannan kanssa, lue `mcp-setup.md`
 
 ## Huomioitavaa
 
