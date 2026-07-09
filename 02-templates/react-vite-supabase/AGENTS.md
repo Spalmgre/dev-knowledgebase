@@ -14,10 +14,11 @@ Tämä pohja on kevyempi vaihtoehto kun et tarvitse Next.js:n server-toimintoja 
 ## Kopiointi uuteen projektiin
 
 1. Kopioi koko kansio sisältöineen
-2. Asenna riippuvuudet: `npm install`
-3. Konfiguroi Supabase (`03-configs/supabase/`)
-4. Lisää env-muuttujat `.env.local`
-5. Testaa: `npm run dev`
+2. Lue knowledgebase-määritykset: `AGENTS.md`, `01-workflows/SYSTEM_INSTRUCTIONS.md`, `01-workflows/workflow-rules.md`, `03-configs/ARCHITECTURE.md`, `03-configs/UI_UX_STANDARDS.md`, `03-configs/MCP_INTEGRATION.md`
+3. Asenna riippuvuudet: `npm install`
+4. Konfiguroi Supabase (`03-configs/supabase/`)
+5. Lisää env-muuttujat `.env.local`
+6. Testaa: `npm run dev`
 
 ## Hakemistorakenne
 

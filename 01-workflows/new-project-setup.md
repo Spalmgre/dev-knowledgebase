@@ -4,6 +4,37 @@ Tämä workflow luo uuden projektin pohjasta ja konfiguroi kaikki tarvittavat pa
 
 ---
 
+## Vaihe 0: Globaalien määritysten lukeminen
+
+Ennen kuin aloitat projektin pystytyksen, lue aina uusimmat globaalit ohjeet knowledgebasesta. Älä oleta että muistat ne ulkoa tai että ne olisivat projektin omassa kansiossa.
+
+### Toimenpiteet:
+
+1. Lue `AGENTS.md` (knowledgebase-juuri)
+2. Lue `01-workflows/SYSTEM_INSTRUCTIONS.md`
+3. Lue `01-workflows/workflow-rules.md`
+4. Lue `03-configs/ARCHITECTURE.md`
+5. Lue `03-configs/UI_UX_STANDARDS.md`
+6. Lue `03-configs/MCP_INTEGRATION.md`
+7. Jos projekti käyttää Supabasea, lue `03-configs/supabase/mcp-setup.md`
+8. Jos projekti käyttää Verceliä, lue `03-configs/vercel/mcp-setup.md`
+
+### Kopioiminen projektiin (valinnainen)
+
+Jos projekti tarvitsee offline-kopion määrityksistä, kopioi luettujen dokumenttien keskeiset kohdat projektin `docs/knowledgebase/`-kansioon ja viittaa alkuperäiseen tiedostoon. Älä kopioi salaisuuksia tai API-avaimia.
+
+### Tarkistus:
+
+- [ ] `AGENTS.md` luettu
+- [ ] `01-workflows/SYSTEM_INSTRUCTIONS.md` luettu
+- [ ] `01-workflows/workflow-rules.md` luettu
+- [ ] `03-configs/ARCHITECTURE.md` luettu
+- [ ] `03-configs/UI_UX_STANDARDS.md` luettu
+- [ ] `03-configs/MCP_INTEGRATION.md` luettu
+- [ ] Palvelukohtaiset MCP-asetukset luettu jos tarvitaan
+
+---
+
 ## Vaihe 1: Projektin perustaminen
 
 ### Toimenpiteet:

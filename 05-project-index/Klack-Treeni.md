@@ -18,7 +18,7 @@
 ## Knowledgebase-yhteensopivuus
 
 **Knowledgebase-versio**: 1.0  
-**Viimeksi päivitetty**: 2026-06-25  
+**Viimeksi päivitetty**: 2026-07-09  
 **Sovelluksen versio**: v2.67 (versiointi: Dashboard/Login-footerit + Projectlog.md; `package.json` version on vanhentunut eikä sitä käytetä)
 
 ### Noudatetut määritykset
@@ -26,6 +26,11 @@
 - [x] Vercel-deployment GitHub-pushista (auto)
 - [x] Supabase auth + cloud sync
 - [ ] `01-workflows/new-project-setup.md` — EI sovellu sellaisenaan (Next.js-pohja)
+- [ ] `01-workflows/SYSTEM_INSTRUCTIONS.md` luettu
+- [ ] `01-workflows/workflow-rules.md` luettu
+- [ ] `03-configs/ARCHITECTURE.md` luettu ja noudatettu
+- [ ] `03-configs/UI_UX_STANDARDS.md` luettu ja noudatettu
+- [ ] `03-configs/MCP_INTEGRATION.md` luettu (jos MCP:tä käytetään)
 - [ ] `03-configs/supabase/oauth-providers.md` — ei OAuth-providereita käytössä (email-auth)
 
 ### Dokumentoidut poikkeamat
