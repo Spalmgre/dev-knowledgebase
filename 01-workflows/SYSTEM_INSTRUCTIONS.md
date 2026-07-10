@@ -4,6 +4,16 @@ Tämä dokumentti määrittelee keskitetyt ohjeet kaikille agenteille, jotka ty�
 
 ---
 
+# Viestintäsäännöt (pakollinen)
+
+- **Tiivistä aina** — ei turhia lauseita, ei toistoa
+- **Ei vahvistuksia** — älä kommentoi omia havaintoja ("Hyvä, se oli jo asetettu")
+- **Otsikot lyhyesti** — "Yhteenveto" ei "Yhteenveto ongelmasta ja korjauksesta"
+- **Toimenpiteet imperatiivimuodossa** — "Käynnistä uusi sessio: kirjoita..." ei "Kun avaat projektin uudessa sessiossa, kirjoita ensin..."
+- **Ei selityksiä tehtyjen muutosten takana** jos käyttäjä ei kysy
+
+---
+
 # Välttämättömät Toimenpiteet Ennen Työn Aloittamista
 
 ## 1. Knowledgebase-Synkronointi (Pakollinen)
