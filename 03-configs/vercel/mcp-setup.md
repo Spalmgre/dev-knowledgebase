@@ -5,6 +5,8 @@ Vercel-integraatio tekoälyagenteille. Mahdollistaa deploymenttien, projektien, 
 **Päivitetty**: 2026-07-09  
 **Versio**: 1.0
 
+> **Huom:** Tämä konfiguraatio on tarkoitettu vain projekteille, jotka käyttävät Verceliä. Jos projekti käyttää muuta hosting-alustaa (Firebase Hosting, Railway, Fly.io, Render, GitHub Pages jne.), ohita tämä tiedosto kokonaan. Älä asenna tai konfiguroi Vercel MCP:tä tai API-tokenia jos Verceliä ei ole projektin teknologioissa.
+
 ---
 
 ## Suositeltu tapa 1: Vercelin virallinen MCP (etäpalvelin + OAuth)

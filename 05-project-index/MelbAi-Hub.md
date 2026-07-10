@@ -10,7 +10,7 @@
 ## Yleiskuva
 
 **Tyyppi**: Web  
-**Teknologiat**: [Tarkista projektista]  
+**Teknologiat**: [Tarkista projektista] — käyttää Firebase Hostingia (ei Verceliä)  
 **Tarkoitus**: AI Hub -sovellus  
 
 ---
@@ -31,17 +31,15 @@
 - [ ] `03-configs/supabase/oauth-providers.md` mukana (jos Supabase käytössä)
 - [ ] `03-configs/supabase/keep-alive-heartbeat.md` mukana (jos Supabase free-tier)
 - [ ] `03-configs/supabase/mcp-setup.md` mukana (jos Supabase MCP käytössä)
-- [ ] `03-configs/vercel/project-settings.md` mukana (jos Vercel käytössä)
-- [ ] `03-configs/vercel/mcp-setup.md` mukana (jos Vercel MCP käytössä)
+- N/A `03-configs/vercel/project-settings.md` — projekti käyttää Firebase Hostingia
+- N/A `03-configs/vercel/mcp-setup.md` — Vercel ei käytössä, älä konfiguroi
 - [ ] `02-templates/github-actions/supabase-keep-alive.yml` kopioitu ja `HEARTBEAT_SECRET` lisätty (jos Supabase free-tier)
 
 ### Dokumentoidut poikkeamat
 
-Jos projekti poikkeaa knowledgebase-määrityksistä, dokumentoi tähän:
-
 | Kohta | Knowledgebase | Tämä projekti | Syy |
 |-------|---------------|---------------|-----|
-| [esim. Framework] | Next.js | [toteutus] | [syy] |
+| Hosting | Vercel | Firebase Hosting | Projekti käyttää Google-työkaluja |
 
 ---
 

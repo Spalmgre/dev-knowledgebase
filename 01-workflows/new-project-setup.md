@@ -15,9 +15,17 @@ Ennen kuin aloitat projektin pystytyksen, lue aina uusimmat globaalit ohjeet kno
 3. Lue `01-workflows/workflow-rules.md`
 4. Lue `03-configs/ARCHITECTURE.md`
 5. Lue `03-configs/UI_UX_STANDARDS.md`
-6. Lue `03-configs/MCP_INTEGRATION.md`
-7. Jos projekti käyttää Supabasea, lue `03-configs/supabase/mcp-setup.md`
-8. Jos projekti käyttää Verceliä, lue `03-configs/vercel/mcp-setup.md`
+6. **Selvitä projektin teknologiat** (katsomalla `05-project-index/[projekti].md` tai kysymällä käyttäjältä):
+   - Mikä on hosting-alusta? (Vercel / Firebase Hosting / Railway / muu)
+   - Mikä on tietokanta / backend? (Supabase / Firebase / MongoDB / muu)
+   - Käytetäänkö MCP-integraatioita?
+7. Lue vain käytössä olevien palveluiden konfiguraatiot:
+   - **Jos Supabase käytössä:** lue `03-configs/supabase/mcp-setup.md`
+   - **Jos Vercel käytössä:** lue `03-configs/vercel/mcp-setup.md`
+   - **Muille palveluille:** etsi vastaava konfiguraatio tai dokumentoi poikkeama projekti-indeksiin
+   - **Älä asenna tai konfiguroi palvelua jota ei ole projektin teknologioissa**
+
+> **Tärkeää:** Palvelukohtaiset konfiguraatiot (`03-configs/supabase/`, `03-configs/vercel/`) koskevat vain projekteja jotka käyttävät kyseistä palvelua. Ei saa olettaa että kaikki projektit käyttävät samoja palveluita.
 
 ### Kopioiminen projektiin (valinnainen)
 
@@ -30,8 +38,8 @@ Jos projekti tarvitsee offline-kopion määrityksistä, kopioi luettujen dokumen
 - [ ] `01-workflows/workflow-rules.md` luettu
 - [ ] `03-configs/ARCHITECTURE.md` luettu
 - [ ] `03-configs/UI_UX_STANDARDS.md` luettu
-- [ ] `03-configs/MCP_INTEGRATION.md` luettu
-- [ ] Palvelukohtaiset MCP-asetukset luettu jos tarvitaan
+- [ ] Projektin teknologiat selvitetty
+- [ ] Vain käytössä olevien palveluiden konfiguraatiot luettu
 
 ---
 

@@ -140,9 +140,11 @@ import { useAuth } from '@/hooks/use-auth';
 
 # Palveluintegraatiot
 
-## Supabase
+## Supabase (vain jos projekti käyttää Supabasea)
 
-### Perusasetukset (kaikissa projekteissa)
+> Jos projekti käyttää muuta tietokantaa tai backendpalvelua (Firebase, PlanetScale, MongoDB, jne.), **ohita tämä osio kokonaan**. Älä asenna `@supabase/supabase-js` jos Supabasea ei käytetä.
+
+### Perusasetukset
 
 ```typescript
 // lib/supabase.ts
@@ -168,21 +170,14 @@ CREATE POLICY "Users can update own profile" ON "Profile"
   FOR UPDATE USING (auth.uid() = id);
 ```
 
-## Vercel
+## Vercel (vain jos projekti käyttää Verceliä)
+
+> Jos projekti käyttää muuta hosting-alustaa (Firebase Hosting, Railway, Fly.io, Render, jne.), **ohita tämä osio kokonaan**. Älä asenna tai konfiguroi Vercel-integrointia jos Verceliä ei ole projektin teknologioissa.
 
 ### Environment Variables
 
 ```bash
-# Pakolliset kaikissa projekteissa
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
-
-# Development
-NEXT_PUBLIC_APP_URL=http://localhost:3000
-NODE_ENV=development
-
-# Production
+# Pakolliset vain Vercel-projekteissa
 NEXT_PUBLIC_APP_URL=https://your-domain.vercel.app
 NODE_ENV=production
 ```
@@ -351,15 +346,17 @@ CREATE INDEX "messages_created_at_idx" ON "messages"("created_at" DESC);
    npm run lint
    ```
 
-2. **Environment check:**
+2. **Environment check (käytä vain jos alla oleva palvelu on käytössä):**
    ```bash
-   # Varmista että kaikki env-muuttujat on asetettu
+   # Vercel-projekteille
    vercel env ls
+
+   # Firebase-projekteille
+   firebase apps:list
    ```
 
-3. **Database migration:**
+3. **Database migration (vain jos Supabase käytössä):**
    ```bash
-   # Supabase migration
    supabase db push
    ```
 
@@ -367,7 +364,7 @@ CREATE INDEX "messages_created_at_idx" ON "messages"("created_at" DESC);
 
 1. **Tarkista build lokit**
 2. **Testaa kriittiset toiminnot**
-3. **Varmista database-yhteys**
+3. **Varmista database-yhteys (vain jos tietokanta käytössä)**
 4. **Validoi environment variables**
 
 ---

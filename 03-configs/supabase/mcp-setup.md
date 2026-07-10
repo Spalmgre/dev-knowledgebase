@@ -5,6 +5,8 @@ Supabase-integraatio tekoälyagenteille. Mahdollistaa tietokannan hallinnan, kys
 **Päivitetty**: 2026-07-09  
 **Versio**: 1.0
 
+> **Huom:** Tämä konfiguraatio on tarkoitettu vain projekteille, jotka käyttävät Supabasea. Jos projekti käyttää muuta tietokantaa tai backendpalvelua (Firebase, MongoDB, PlanetScale jne.), ohita tämä tiedosto kokonaan. Älä asenna tai konfiguroi Supabase MCP:tä jos Supabasea ei ole projektin teknologioissa.
+
 ---
 
 ## Suositeltu tapa: Supabase MCP Server
