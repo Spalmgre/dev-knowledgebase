@@ -82,6 +82,21 @@ type AGENTS.md
 - Päivitä knowledgebase-pohjat
 - Dokumentoi uusi käytäntö
 
+## Pakollinen koodivalidointi (jokainen muutos)
+
+**Ennen koodin kirjoittamista:**
+1. Lue muutettava tiedosto kokonaan — tunnista olemassa olevat algoritmit, state-hallinta ja riippuvuudet
+2. Tarkista liittyvät tiedostot jotka kutsuvat tai joita kutsutaan muutettavasta kohdasta
+3. Kysy itseltäsi: "Rikkooko tämä muutos jonkin olemassa olevan toiminnon?"
+
+**Muutoksen jälkeen:**
+1. Aja `npm run build` — varmista että koodi kääntyy
+2. Tarkista että muutettu toiminto toimii tarkoituksensa mukaan
+3. Tarkista että **aiemmin toimineet** ominaisuudet eivät ole rikkoutuneet
+4. Jos muutos koskee autentikaatiota, tietoturvaa tai kriittistä dataa — raportoi käyttäjälle ennen commitia
+
+**Älä commitoi ennen kuin validointi on tehty.**
+
 ---
 
 # Tekniset Standardit
