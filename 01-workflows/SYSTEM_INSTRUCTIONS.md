@@ -405,6 +405,8 @@ CREATE INDEX "messages_created_at_idx" ON "messages"("created_at" DESC);
 4. **Käytä aina standardoituja konfiguraatioita** `03-configs/` kansiosta
 5. **Testaa build ennen jokaista commit**
 6. **Dokumentoi kaikki poikkeukset** standardikäytännöistä
+7. **Älä pyydä käyttäjää hakemaan tietoja manuaalisesti jos MCP tai muu työkalu voi hakea ne** — esim. Supabase anon key MCP:llä, Vercel project ID API:lla. Pyydä käyttäjää vain jos automaattinen haku epäonnistuu.
+8. **Käytä Devin-nimeä, ei Windsurf** kaikessa dokumentaatiossa ja viestinnässä.
 
 ---
 

@@ -125,6 +125,17 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=<anon-public-key>
 SUPABASE_SERVICE_ROLE_KEY=<service-role-key>   # vain server-side, ei MCP-konfiguraatioon tarvittaessa
 ```
 
+### 5. Hae API-avaimet automaattisesti MCP:llä
+
+Jos Supabase MCP on jo aktiivinen, **älä pyydä käyttäjää hakemaan avaimia manuaalisesti**. Hae ne itse MCP-työkalulla:
+
+```
+list_projects → etsi oikea project ref
+get_project_api_keys --project-ref <ref> → palauttaa anon key + service role key
+```
+
+Täytä `.env`-tiedostoon suoraan. Pyydä käyttäjää vain jos MCP ei ole käytössä tai palauttaa virheen.
+
 ---
 
 ## Vaihtoehto: Suora Supabase REST API
