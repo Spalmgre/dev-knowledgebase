@@ -6,9 +6,12 @@ Git push tehdään automaattisesti ilman erillistä kysymistä, kun:
 1. Koodimuutokset on tehty
 2. `npm run build` onnistuu (exit 0)
 
-Komento: `git add -A && git commit && git push`
+// turbo
+Komento: `git add -A && git commit -m "[viesti]" && git push`
 
 Tämä koskee kaikkia projekteja.
+
+**IDE-asetus (tee kerran):** Lisää Windsurf/Cascade-asetuksiin auto-run allowlist pattern `git *` jotta git-komennot eivät vaadi napinpainallusta. Settings → Cascade → Auto-run Commands.
 
 ## Deploy-lokien tarkistus
 
