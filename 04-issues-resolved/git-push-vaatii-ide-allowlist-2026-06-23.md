@@ -43,7 +43,16 @@ Hakusana "allow list" VS Code -asetuksissa näyttää vain Extensions/Terminal/F
 
    ('\*' lopussa = prefix matching → kattaa git add / commit / push / kaikki git-komennot)
 
-6. Valmis. Ei erillistä tallennusnappia.
+6. Lisää myös muut suositellut patternit (yksi per rivi):
+
+   ```
+   git *
+   npm *
+   npx *
+   firebase *
+   ```
+
+7. Valmis. Ei erillistä tallennusnappia.
 
 Lisäksi: varmista että samalla Cascade-sivulla **`Auto execution`** = **`Auto`**
 (ei `Off`). Allowlist toimii Auto-tilassa.
