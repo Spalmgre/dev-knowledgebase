@@ -2,7 +2,7 @@
 
 ## Ongelma
 
-Agentti (Cascade/Windsurf) ei aja `git add -A && git commit && git push` -komentoa
+Agentti (Cascade/Devin) ei aja `git add -A && git commit && git push` -komentoa
 automaattisesti, vaikka:
 
 - globaali git-automaatiosääntö on kirjattu `workflow-rules.md`
@@ -14,7 +14,7 @@ Käyttäjän pitää silti painaa hyväksyntänappia ("Run" / "Accept") joka ker
 ## Syy (juurisyy)
 
 Komennon lopullinen auto-suoritus EI ole agentin päätettävissä. Se on IDE:n
-turvaportin takana. Windsurf vaatii, että komento on käyttäjän hyväksymällä
+turvaportin takana. Devin vaatii, että komento on käyttäjän hyväksymällä
 **allowlistillä** TAI että **Turbo Mode** on päällä.
 
 Tämä on tahallinen turvarajoitus: agentti ei voi itse ohittaa sitä, eikä mikään
@@ -25,7 +25,7 @@ sallia komennot asetuksista — kertaluonteisesti.
 
 TÄRKEÄÄ: Cascaden komento-allowlist EI ole tavallisessa VS Code Settings -haussa.
 Hakusana "allow list" VS Code -asetuksissa näyttää vain Extensions/Terminal/Fonts
--tuloksia — ne ovat VÄÄRIÄ. Allowlist on Windsurfin omassa asetuspaneelissa.
+-tuloksia — ne ovat VÄÄRIÄ. Allowlist on Devinin omassa asetuspaneelissa.
 
 ### Tarkka polku (testattu, toimii)
 
@@ -67,5 +67,5 @@ ILMAN "Run"-napin painamista heti kun `git *` lisättiin allowlistiin.
 ## Avainsanat
 
 allowlist, allow list, turbo mode, git push automaatio, SafeToAutoRun,
-hyväksyntä, auto-execute, Cascade terminal, Windsurf settings, ei pushaa,
+hyväksyntä, auto-execute, Cascade terminal, Devin settings, ei pushaa,
 nappi, run nappi

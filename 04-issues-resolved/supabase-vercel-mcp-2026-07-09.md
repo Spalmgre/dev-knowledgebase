@@ -3,7 +3,7 @@
 **Ongelma**: Knowledgebasessa ei ollut valmista konfiguraatiota Supabase- ja Vercel-MCP:iden käyttöön tekoälyagenttien kanssa  
 **Ratkaistu**: 2026-07-09  
 **Projekti**: Klack-SaaS-Chat (huomio havaittu tässä projektissa, sovellettavissa kaikkiin)  
-**Avainsanat**: supabase, vercel, mcp, model context protocol, agent, cursor, claude, windsurf, service role key, rest api, deployment
+**Avainsanat**: supabase, vercel, mcp, model context protocol, agent, cursor, claude, devin, service role key, rest api, deployment
 
 ---
 
@@ -70,4 +70,4 @@ Nyt knowledgebase sisältää valmiit, kopioitavat Supabase- ja Vercel-MCP-konfi
 
 **Mahdollisia parannuksia:**
 - Päivitetään tiedostoja kun Supabase / Vercel julkaisee MCP-asetuksiin muutoksia.
-- Lisätään asiakaskohtaisia esimerkkejä (Windsurf, VS Code Copilot) tarvittaessa.
+- Lisätään asiakaskohtaisia esimerkkejä (Devin, VS Code Copilot) tarvittaessa.

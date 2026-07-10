@@ -32,5 +32,5 @@ Jokaisessa dokumentissa pitää olla:
 | Tiedosto                                      | Ongelma                                                |
 | --------------------------------------------- | ------------------------------------------------------ |
 | `vercel-github-trigger-2025-06-16.md`         | Vercel ei triggeröitynyt GitHub-pushista               |
-| `git-push-vaatii-ide-allowlist-2026-06-23.md` | Git push -auto vaatii Windsurfin allowlistin (`git *`) |
+| `git-push-vaatii-ide-allowlist-2026-06-23.md` | Git push -auto vaatii Devinin allowlistin (`git *`) |
 | `supabase-vercel-mcp-2026-07-09.md`           | Supabase & Vercel MCP -konfiguraatio puuttui           |

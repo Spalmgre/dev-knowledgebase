@@ -11,7 +11,7 @@ Komento: `git add -A && git commit -m "[viesti]" && git push`
 
 Tämä koskee kaikkia projekteja.
 
-**IDE-asetus (tee kerran):** Lisää Windsurf/Cascade-asetuksiin auto-run allowlist pattern `git *` jotta git-komennot eivät vaadi napinpainallusta. Settings → Cascade → Auto-run Commands.
+**IDE-asetus (tee kerran):** Lisää Devin/Cascade-asetuksiin auto-run allowlist pattern `git *` jotta git-komennot eivät vaadi napinpainallusta. Settings → Cascade → Auto-run Commands.
 
 ## Deploy-lokien tarkistus
 
