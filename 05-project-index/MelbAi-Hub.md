@@ -25,12 +25,13 @@
 - **Project ref**: `cklzrolyxbbiyqnwddzd`
 - **URL**: `https://cklzrolyxbbiyqnwddzd.supabase.co`
 - **MCP**: Konfiguroitu `mcpConfig.json`:ssa — `@supabase/mcp-server-supabase`
-- **Anon key**: Täytettävä `.env`:ään manuaalisesti (Project Settings → API)
+- **Anon key**: Hae MCP:llä (`get_project_api_keys`) ja täytä `.env`:ään — älä pyydä käyttäjää manuaalisesti
 
 ### Noudatetut määritykset
 
 - [x] `01-workflows/SYSTEM_INSTRUCTIONS.md` luettu
 - [x] `01-workflows/workflow-rules.md` luettu
+- [x] `03-configs/devin/ide-setup.md` luettu — Devin/Cascade-asetukset tarkistettu
 - [x] `03-configs/supabase/mcp-setup.md` mukana — Supabase MCP konfiguroitu
 - N/A `03-configs/vercel/project-settings.md` — projekti käyttää Firebase Hostingia
 - N/A `03-configs/vercel/mcp-setup.md` — Vercel ei käytössä

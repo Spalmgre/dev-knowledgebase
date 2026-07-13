@@ -28,6 +28,7 @@
 - [ ] `03-configs/ARCHITECTURE.md` luettu ja noudatettu
 - [ ] `03-configs/UI_UX_STANDARDS.md` luettu ja noudatettu
 - [ ] `03-configs/MCP_INTEGRATION.md` luettu (jos MCP:tä käytetään)
+- [ ] `03-configs/devin/ide-setup.md` luettu — Devin-asetukset tarkistettu (ei kulje gitin mukana)
 - [ ] `03-configs/supabase/oauth-providers.md` mukana (jos Supabase käytössä)
 - [ ] `03-configs/supabase/keep-alive-heartbeat.md` mukana (jos Supabase free-tier)
 - [ ] `03-configs/supabase/mcp-setup.md` mukana (jos Supabase MCP käytössä)

@@ -33,6 +33,15 @@ cat 01-workflows/SYSTEM_INSTRUCTIONS.md
 cat 03-configs/ARCHITECTURE.md
 ```
 
+## 1b. Devin/Cascade-asetusten tarkistus
+
+**Nämä asetukset eivät kulje gitin mukana.** Agentti ei voi asettaa niitä puolestasi. Tarkista ne kerran per työasema:
+
+- Lue: `03-configs/devin/ide-setup.md`
+- Varmista Allow list: `git *`, `npm *`, `npx *`, `firebase *`
+- Varmista Auto execution: `Auto`
+- Aktivoi MCP-palvelimet projektin teknologioiden mukaan
+
 ## 2. Projektikohtainen Alustus
 
 ```bash

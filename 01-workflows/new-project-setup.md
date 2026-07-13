@@ -38,6 +38,7 @@ Jos projekti tarvitsee offline-kopion määrityksistä, kopioi luettujen dokumen
 - [ ] `01-workflows/workflow-rules.md` luettu
 - [ ] `03-configs/ARCHITECTURE.md` luettu
 - [ ] `03-configs/UI_UX_STANDARDS.md` luettu
+- [ ] `03-configs/devin/ide-setup.md` luettu — Devin/Cascade-asetukset tarkistettu
 - [ ] Projektin teknologiat selvitetty
 - [ ] Vain käytössä olevien palveluiden konfiguraatiot luettu
 

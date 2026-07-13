@@ -18,6 +18,7 @@ Pohjat noudattavat ja viittaavat näihin globaaleihin määrityksiin. Älä kopi
 - `03-configs/ARCHITECTURE.md`
 - `03-configs/UI_UX_STANDARDS.md`
 - `03-configs/MCP_INTEGRATION.md`
+- `03-configs/devin/ide-setup.md` — Devin/Cascade-asetukset eivät kulje gitin mukana
 
 Jos projekti tarvitsee offline-kopion, kopioi lyhennelmä `docs/knowledgebase/`-kansioon ja viittaa alkuperäiseen tiedostoon.
 
