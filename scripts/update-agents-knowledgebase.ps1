@@ -9,7 +9,7 @@ $requiredSection = @"
 
 1. Hae viimeisimmät knowledgebase-päivitykset:
    ```bash
-   cd "C:\TYO\GitHub Local\dev-knowledgebase" && git pull origin main
+   cd C:\TYO\GitHub Local\dev-knowledgebase && git pull origin main
    ```
 2. Lue knowledgebase-määritykset:
    - `AGENTS.md`
