@@ -51,12 +51,14 @@ Jos projekti tarvitsee offline-kopion määrityksistä, kopioi luettujen dokumen
 1. Luo uusi kansio: `C:\TYO\GitHub Local\[projekti-nimi]`
 2. Kopioi pohja `02-templates/nextjs-supabase/` tähän kansioon
 3. Avaa kansio VS Code:ssa uutena ikkunana
-4. Luo `README.md` projektin kuvauksella
+4. **Tarkista että projektin juuren `AGENTS.md` sisältää pakollisen knowledgebase-alustusosion** (hae `git pull origin main` ja viittaukset `dev-knowledgebase/`-tiedostoihin)
+5. Luo `README.md` projektin kuvauksella
 
 ### Tarkistus:
 
 - [ ] Kansio luotu ja pohja kopioitu
 - [ ] VS Code avattu oikeassa kansiossa
+- [ ] `AGENTS.md` sisältää pakollisen knowledgebase-alustusosion
 - [ ] README.md luotu
 
 ---

@@ -10,8 +10,8 @@ Tämä on keskitetty osaamispankki kaikille projekteille. Kaikki toimivat ratkai
 2. Lue globaalit määritykset: `01-workflows/SYSTEM_INSTRUCTIONS.md`, `01-workflows/workflow-rules.md`, `03-configs/ARCHITECTURE.md`, `03-configs/UI_UX_STANDARDS.md`, `03-configs/MCP_INTEGRATION.md`
 3. Seuraa vaiheet tarkasti järjestyksessä
 4. Kopioi pohja `02-templates/` kansiosta projektityypin mukaan
-5. Aseta Supabase: `03-configs/supabase/`
-6. Konfiguroi Vercel: `03-configs/vercel/`
+5. Varmista että projektin `AGENTS.md` sisältää pakollisen knowledgebase-alustusosion (`git pull origin main` + knowledgebase-viittaukset)
+6. Aseta palvelut projektin teknologioiden mukaan: Supabase (`03-configs/supabase/`) jos käytössä, Vercel (`03-configs/vercel/`) jos käytössä
 
 ---
 

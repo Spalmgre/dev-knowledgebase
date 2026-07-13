@@ -7,6 +7,22 @@ Tämä pohja sisältää:
 - TypeScript
 - Perus hakemistorakenne
 
+## Pakollinen alustus (tee aina ennen työn aloittamista)
+
+1. Hae viimeisimmät knowledgebase-päivitykset:
+   ```bash
+   cd "C:\TYO\GitHub Local\dev-knowledgebase" && git pull origin main
+   ```
+2. Lue knowledgebase-määritykset:
+   - `AGENTS.md`
+   - `01-workflows/SYSTEM_INSTRUCTIONS.md`
+   - `01-workflows/workflow-rules.md`
+   - `03-configs/ARCHITECTURE.md`
+   - `03-configs/UI_UX_STANDARDS.md`
+   - `03-configs/MCP_INTEGRATION.md`
+   - `03-configs/devin/ide-setup.md`
+3. Varmista että tämän projektin `AGENTS.md` on yhdenmukainen knowledgebasen kanssa. Jos knowledgebase on päivittynyt, päivitä myös tämä tiedosto.
+
 ## Käyttötarkoitus
 
 Tämä pohja on kevyempi vaihtoehto kun et tarvitse Next.js:n server-toimintoja (SSR, API routes).
