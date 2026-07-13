@@ -2,7 +2,7 @@
 
 **Tiedostonimi**: `Klack-SaaS-Chat.md`  
 **Projektin kansio**: `C:\TYO\GitHub Local\Klack-SaaS-Chat`  
-**GitHub-repo**: [Tarkista repo-osoite GitHubista]  
+**GitHub-repo**: https://github.com/Spalmgre/Klack-SaaS-Chat  
 **Status**: Aktiivinen  
 
 ---
@@ -10,30 +10,25 @@
 ## Yleiskuva
 
 **Tyyppi**: Web  
-**Teknologiat**: [Tarkista projektista: Next.js / React / jne.]  
+**Teknologiat**: Next.js 14, React, TypeScript, Prisma, Supabase, TailwindCSS, framer-motion  
 **Tarkoitus**: SaaS-chat-sovellus  
 
 ---
 
 ## Knowledgebase-yhteensopivuus
 
-**Knowledgebase-versio**: [Ei vielä merkitty - päivitä kun knowledgebase otetaan käyttöön]  
-**Viimeksi päivitetty**: 2026-07-09  
+**Knowledgebase-versio**: 1.0  
+**Viimeksi päivitetty**: 2026-07-12  
 
 ### Noudatetut määritykset
 
-- [ ] `01-workflows/new-project-setup.md` käytetty projektin luonnissa
-- [ ] `01-workflows/SYSTEM_INSTRUCTIONS.md` luettu
-- [ ] `01-workflows/workflow-rules.md` luettu
-- [ ] `03-configs/ARCHITECTURE.md` luettu ja noudatettu
-- [ ] `03-configs/UI_UX_STANDARDS.md` luettu ja noudatettu
-- [ ] `03-configs/MCP_INTEGRATION.md` luettu (jos MCP:tä käytetään)
-- [ ] `03-configs/supabase/oauth-providers.md` mukana (jos Supabase käytössä)
 - [x] `03-configs/supabase/keep-alive-heartbeat.md` mukana (Supabase free-tier)
 - [x] `02-templates/github-actions/supabase-keep-alive.yml` kopioitu ja `HEARTBEAT_SECRET` lisätty
-- [ ] `03-configs/vercel/project-settings.md` mukana (jos Vercel käytössä)
-- [ ] `03-configs/supabase/mcp-setup.md` mukana (jos MCP:tä käytetään Supabasen kanssa)
-- [ ] `03-configs/vercel/mcp-setup.md` mukana (jos MCP:tä käytetään Vercelin kanssa)
+- [x] `03-configs/supabase/mcp-setup.md` luettu (Supabase MCP/REST API -ohjeet)
+- [x] `03-configs/vercel/mcp-setup.md` luettu (Vercel MCP/REST API -ohjeet)
+- [x] `03-configs/vercel/project-settings.md` ja `environment-variables.md` huomioitu
+- [ ] `03-configs/supabase/oauth-providers.md` mukana (ei vielä otettu käyttöön)
+- [ ] `01-workflows/new-project-setup.md` käytetty projektin luonnissa (legacy)
 
 ### Dokumentoidut poikkeamat
 
@@ -45,26 +40,28 @@
 
 | Palvelu | URL | Huomiot |
 |---------|-----|---------|
-| **Production** | [Vercel-URL] | |
-| **Supabase** | [Supabase-dashboard] | |
-| **GitHub** | https://github.com/[user]/Klack-SaaS-Chat | |
-| **Vercel** | https://vercel.com/[user]/[project] | |
+| **Production** | https://klack-saas-chat.vercel.app | Vercel, tiimi `stefans-projects-edee8ecd` |
+| **Supabase** | https://supabase.com/dashboard/project/fovohupqgjsvdlhynkqa | Project ref `fovohupqgjsvdlhynkqa` |
+| **GitHub** | https://github.com/Spalmgre/Klack-SaaS-Chat | Private repo |
+| **Vercel** | https://vercel.com/stefans-projects-edee8ecd/klack-saas-chat | Project ID `prj_Bfpz6n60O3PDEjaVZhazdgcUL7zH` |
 
 ---
 
 ## Asetukset
 
-### Supabase (jos käytössä)
+### Supabase
 
-- **Project ID**: [tarkista dashboardista]
-- **Region**: [eu-central-1 / jne.]
-- **OAuth Providerit**: [GitHub / Google]
+- **Project ref**: `fovohupqgjsvdlhynkqa`
+- **Region**: `eu-central-1`
+- **OAuth Providerit**: ei vielä käytössä
 
-### Vercel (jos käytössä)
+### Vercel
 
-- **Project Name**: [nimi]
-- **Framework**: [Next.js / React]
-- **Build Command**: [next build]
+- **Project Name**: `klack-saas-chat`
+- **Team ID**: `team_6mTwXImKbKZ4QuseCb3g4VmX`
+- **Project ID**: `prj_Bfpz6n60O3PDEjaVZhazdgcUL7zH`
+- **Framework**: Next.js
+- **Build Command**: `prisma generate && next build`
 
 ---
 
@@ -74,6 +71,7 @@
 |------------|---------|--------------------------|
 | 2026-07-06 | Supabase free-tier pausointi estetään DB-kyselyä tekevällä keep-alive workflowlla | `03-configs/supabase/keep-alive-heartbeat.md` |
 | 2026-07-09 | Supabase & Vercel MCP -konfiguraatio puuttui knowledgebasesta | `03-configs/supabase/mcp-setup.md`, `03-configs/vercel/mcp-setup.md`, `04-issues-resolved/supabase-vercel-mcp-2026-07-09.md` |
+| 2026-07-12 | Keep-alive endpoint palautti 401, koska `HEARTBEAT_SECRET` puuttui Vercel production-envistä | `04-issues-resolved/keep-alive-unauthorized-2026-07-12.md` |
 
 ---
 
