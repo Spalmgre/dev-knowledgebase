@@ -72,6 +72,35 @@ MCP-palvelimet asetetaan Devin-asetusten **MCP servers** -kohdassa. Projekti ei 
 
 ---
 
+## Google AI Skills
+
+Skillit ovat Devinin sisäänrakennettuja tietolähteitä jotka tarjoavat ohjeita ja kontekstia tietyistä teknologioista. Ne rekisteröidään projektiin `.agents/skills/` ja `.claude/skills/` -hakemistoihin sekä `skills-lock.json` -tiedostoon.
+
+### Saatavilla olevat Google/Cloud -skillit
+
+| Skill | Käyttötarkoitus |
+|-------|----------------|
+| `gemini-api` | Gemini API + GenAI SDK (multimodal, tools, streaming) |
+| `gcloud` | gcloud CLI -hallinta (turvallinen käyttö, denylist) |
+| `agent-platform-inference` | Gemini + OpenMaaS mallikutsut, autentikointi |
+| `gemini-agents-api` | Agenttien luonti & hallinta Agent Platformilla |
+| `gemini-interactions-api` | Stateful multi-turn Interactions API |
+| `agent-platform-rag-engine-management` | RAG Engine -hallinta |
+| `cloud-run-basics` | Cloud Run services/jobs/worker pools |
+| `find-skills` | Uusien skillien löytäminen ja asennus |
+
+### Asennusohje uuteen projektiin
+
+1. Luo tyhjät hakemistot: `.agents/skills/<skill-nimi>` ja `.claude/skills/<skill-nimi>`
+2. Lisää `skills-lock.json`:ään entry source-tiedolla
+3. Commitoi muutokset
+
+### Firebase-skillit (automaattisesti mukana)
+
+`firebase-basics`, `firebase-auth-basics`, `firebase-hosting-basics`, `firebase-app-hosting-basics`, `firebase-firestore-standard`, `firebase-firestore-enterprise-native-mode`, `firebase-data-connect`, `firebase-ai-logic`, `firestore-security-rules-auditor`, `developing-genkit-dart`, `developing-genkit-go`, `developing-genkit-js`
+
+---
+
 ## Projekti- vs. IDE-asetusten erottelu
 
 | Mitä | Missä | Synkkaako gitillä |
@@ -102,5 +131,5 @@ MCP-palvelimet asetetaan Devin-asetusten **MCP servers** -kohdassa. Projekti ei 
 
 ---
 
-**Päivitetty**: 2026-07-13  
-**Versio**: 1.0
+**Päivitetty**: 2026-07-15  
+**Versio**: 1.1

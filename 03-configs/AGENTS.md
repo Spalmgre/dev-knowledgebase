@@ -16,6 +16,7 @@ Tämä kansio sisältää toimivat määritykset ja asetukset.
 | `vercel/` | Project-asetukset, environment-muuttujat, MCP-konfiguraatio |
 | `github/` | Actions workflowt, branch-suojaus |
 | `devin/` | Devin/Cascade-IDE-asetukset jotka eivät kulje gitin mukana |
+| `devin/project-window-colors.md` | Projektikohtainen ikkunan kehysväri |
 
 ## Yleiset määritykset
 
