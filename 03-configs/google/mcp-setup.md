@@ -13,7 +13,7 @@ Tämä tiedosto määrittelee Devin/Cascade-ympäristöön kytkettävät Google 
 |----------|-------------------|-----------------|
 | `google-cloud-gcloud` | `npx -y @google-cloud/gcloud-mcp` | gcloud CLI -komennot (GCS, Cloud Run, Secret Manager, IAM, Firebase Functions jne.) |
 | `google-cloud-storage` | `npx -y @google-cloud/storage-mcp` | Cloud Storage -bucketit ja objektit suoraan |
-| `google-cloud-observability` | `npx -y @google-cloud/observability-mcp` | Logging, Monitoring, Trace, Error Reporting (valinnainen) |
+| `google-cloud-observability` | `npx -y @google-cloud/observability-mcp` | Logging, Monitoring, Trace, Error Reporting |
 
 Vaihtoehtoisesti Cloud Storageen voi käyttää myös virallista remote-endpointia:
 

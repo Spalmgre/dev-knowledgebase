@@ -77,6 +77,7 @@ Lisäksi 12 Firebase/Genkit-skilliä (`firebase-basics`, `firebase-auth-basics`,
 |----------|----------------|
 | `google-cloud-gcloud` | gcloud CLI -toiminnot (GCS, Cloud Run, Functions, Secret Manager...) |
 | `google-cloud-storage` | Cloud Storage -bucketien ja objektien hallinta |
+| `google-cloud-observability` | Logging, Monitoring, Trace, Error Reporting |
 
 Konfiguraatio: `03-configs/google/mcp-setup.md`
 
