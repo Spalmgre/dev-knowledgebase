@@ -23,7 +23,8 @@ Tämä pohja sisältää:
    - `03-configs/devin/ide-setup.md`
    - `03-configs/devin/project-window-colors.md`
 3. Varmista että tämän projektin `AGENTS.md` on yhdenmukainen knowledgebasen kanssa. Jos knowledgebase on päivittynyt, päivitä myös tämä tiedosto.
-4. Aseta projektikohtainen kehysväri `.vscode/settings.json` -tiedostoon.
+4. Ennen muokkaamista tallenna `git status --short` -lähtötila. Stagetä ja commitoi vain oman tehtävän nimetyt tiedostot `01-workflows/workflow-rules.md`-ohjeen mukaisesti.
+5. Aseta projektikohtainen kehysväri `.vscode/settings.json` -tiedostoon.
 
 ## Kopiointi uuteen projektiin
 

@@ -42,6 +42,20 @@ cat 03-configs/ARCHITECTURE.md
 - Varmista Auto execution: `Auto`
 - Aktivoi MCP-palvelimet projektin teknologioiden mukaan
 
+## 1c. Työpuun omistajuuden tarkistus (Pakollinen)
+
+Suorita ennen projektin muokkaamista:
+
+```bash
+git status --short
+```
+
+- Käsittele tulosteen muutoksia lähtötilana, joka voi kuulua toiselle agentille tai keskeneräiseen tehtävään.
+- Älä muuta, stagetä, commitoi, stäshää, palauta tai poista näitä tiedostoja ilman käyttäjän nimenomaista pyyntöä.
+- Stagetä tehtävän lopussa vain itse muuttamasi tiedostot nimetyillä poluilla. Älä käytä `git add -A`, `git add .` tai `git commit -a` jaetussa työpuussa.
+- Raportoi lopuksi omasta commitista pois jääneet lähtötilan muutokset, mutta jätä ne koskematta. Tämä ei vaadi käyttäjältä erillistä päätöstä.
+- Tarkka staging- ja commit-menettely on `01-workflows/workflow-rules.md`-tiedostossa.
+
 ## 2. Projektikohtainen Alustus
 
 ```bash
@@ -439,8 +453,9 @@ CREATE INDEX "messages_created_at_idx" ON "messages"("created_at" DESC);
 4. **Käytä aina standardoituja konfiguraatioita** `03-configs/` kansiosta
 5. **Testaa build ennen jokaista commit**
 6. **Dokumentoi kaikki poikkeukset** standardikäytännöistä
-7. **Älä pyydä käyttäjää hakemaan tietoja manuaalisesti jos MCP tai muu työkalu voi hakea ne** — esim. Supabase anon key MCP:llä, Vercel project ID API:lla. Pyydä käyttäjää vain jos automaattinen haku epäonnistuu.
-8. **Käytä Devin-nimeä, ei Windsurf** kaikessa dokumentaatiossa ja viestinnässä.
+7. **Säilytä muiden muutokset** — älä koskaan sisällytä toisen tehtävän tai lähtötilan muutoksia omaan commit-pushiin ilman käyttäjän nimenomaista pyyntöä
+8. **Älä pyydä käyttäjää hakemaan tietoja manuaalisesti jos MCP tai muu työkalu voi hakea ne** — esim. Supabase anon key MCP:llä, Vercel project ID API:lla. Pyydä käyttäjää vain jos automaattinen haku epäonnistuu.
+9. **Käytä Devin-nimeä, ei Windsurf** kaikessa dokumentaatiossa ja viestinnässä.
 
 ---
 

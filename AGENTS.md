@@ -15,6 +15,19 @@ Tämä on keskitetty osaamispankki kaikille projekteille. Kaikki toimivat ratkai
 
 ---
 
+## Jaettu työpuu ja muutosten omistajuus
+
+Knowledgebase on yhteinen ohjelähde, mutta sen säännöt eivät oikeuta agenttia käsittelemään muiden agenttien tai tehtävien keskeneräisiä muutoksia. Jokaisen projektin on:
+
+1. Tallennettava työpuun `git status --short` -lähtötila ennen muokkaamista.
+2. Säilytettävä kaikki ennestään muuttuneet ja uudet tiedostot koskematta.
+3. Commitoitava ja pushattava vain oman tehtävän nimetyillä tiedostopoluilla stagettu sisältö.
+4. Raportoitava lopuksi omasta commitista pois jääneet muutokset ilman pyyntöä niiden jatkokäsittelystä.
+
+Yksityiskohtainen, pakollinen Git-menettely on `01-workflows/workflow-rules.md`-tiedostossa. Projektikohtainen `AGENTS.md` voi tiukentaa tätä menettelyä, mutta ei sallia muiden muutosten sisällyttämistä omaan committiin.
+
+---
+
 ## Kun käyttäjä pyytää lisäämään globaaliksi
 
 **Käyttäjä saattaa sanoa (tunnista nämä):**
