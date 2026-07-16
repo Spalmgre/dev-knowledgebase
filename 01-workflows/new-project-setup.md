@@ -19,11 +19,13 @@ Ennen kuin aloitat projektin pystytyksen, lue aina uusimmat globaalit ohjeet kno
    - Mikä on hosting-alusta? (Vercel / Firebase Hosting / Railway / muu)
    - Mikä on tietokanta / backend? (Supabase / Firebase / MongoDB / muu)
    - Käytetäänkö MCP-integraatioita?
-7. Lue vain käytössä olevien palveluiden konfiguraatiot:
+   - Onko projekti uusi agenttiprojekti vai tavallinen sovellus, jossa on AI-ominaisuus?
+7. Lue vain käytössä olevien palveluiden ja toteutusmallien konfiguraatiot:
    - **Jos Supabase käytössä:** lue `03-configs/supabase/mcp-setup.md`
    - **Jos Vercel käytössä:** lue `03-configs/vercel/mcp-setup.md`
+   - **Jos projekti on uusi agenttiprojekti:** arvioi EVE `03-configs/vercel/eve-agent-framework.md` -ohjeella. Käytä EVEä vain, jos sen durability-, hyväksyntä-, sandbox-, kanava- tai eval-ominaisuudet ovat tarpeen.
    - **Muille palveluille:** etsi vastaava konfiguraatio tai dokumentoi poikkeama projekti-indeksiin
-   - **Älä asenna tai konfiguroi palvelua jota ei ole projektin teknologioissa**
+   - **Älä asenna tai konfiguroi palvelua tai frameworkia, jota projekti ei tarvitse**
 
 > **Tärkeää:** Palvelukohtaiset konfiguraatiot (`03-configs/supabase/`, `03-configs/vercel/`) koskevat vain projekteja jotka käyttävät kyseistä palvelua. Ei saa olettaa että kaikki projektit käyttävät samoja palveluita.
 
@@ -40,7 +42,8 @@ Jos projekti tarvitsee offline-kopion määrityksistä, kopioi luettujen dokumen
 - [ ] `03-configs/UI_UX_STANDARDS.md` luettu
 - [ ] `03-configs/devin/ide-setup.md` luettu — Devin/Cascade-asetukset tarkistettu
 - [ ] Projektin teknologiat selvitetty
-- [ ] Vain käytössä olevien palveluiden konfiguraatiot luettu
+- [ ] EVE-soveltuvuus arvioitu, jos kyseessä on uusi agenttiprojekti
+- [ ] Vain käytössä olevien palveluiden ja toteutusmallien konfiguraatiot luettu
 
 ---
 

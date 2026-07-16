@@ -9,6 +9,7 @@ Toimivat Vercel-asetukset ja -määritykset.
 | `project-settings.md` | Vercel-projektin perusasetukset |
 | `environment-variables.md` | Required env-muuttujat |
 | `mcp-setup.md` | MCP-integraatio tekoälyagenteille + suora REST API -varavaihtoehto |
+| `eve-agent-framework.md` | EVE-agenttiprojektien arviointi, alustus, rakenne ja tuotantoperiaatteet |
 
 ## Käyttö
 
@@ -17,6 +18,7 @@ Uudessa projektissa:
 2. Lisää kaikki env-muuttujat `environment-variables.md` listasta
 3. Testaa deployment
 4. Jos käytät tekoälyagentteja Vercelin hallintaan, lue `mcp-setup.md`
+5. Jos rakennat uuden agenttiprojektin, lue `eve-agent-framework.md` ennen scaffoldausta
 
 ## Huomioitavaa
 

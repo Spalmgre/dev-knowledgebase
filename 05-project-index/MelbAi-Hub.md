@@ -34,6 +34,7 @@
 - [x] `03-configs/devin/ide-setup.md` luettu — Devin/Cascade-asetukset tarkistettu
 - [x] `03-configs/devin/project-window-colors.md` luettu — kehysväri asetettu `.vscode/settings.json` (violetti #9B6AFF)
 - [x] `03-configs/supabase/mcp-setup.md` mukana — Supabase MCP konfiguroitu
+- [x] `03-configs/google/mcp-setup.md` mukana — Google Cloud MCP konfiguroitu
 - N/A `03-configs/vercel/project-settings.md` — projekti käyttää Firebase Hostingia
 - N/A `03-configs/vercel/mcp-setup.md` — Vercel ei käytössä
 - [ ] `03-configs/supabase/keep-alive-heartbeat.md` — tarkistettava onko free-tier
@@ -69,6 +70,15 @@
 | `find-skills` | Uusien skillien löytäminen |
 
 Lisäksi 12 Firebase/Genkit-skilliä (`firebase-basics`, `firebase-auth-basics`, `firebase-hosting-basics`, jne.)
+
+## Google Cloud MCP (konfiguroitu)
+
+| Palvelin | Käyttötarkoitus |
+|----------|----------------|
+| `google-cloud-gcloud` | gcloud CLI -toiminnot (GCS, Cloud Run, Functions, Secret Manager...) |
+| `google-cloud-storage` | Cloud Storage -bucketien ja objektien hallinta |
+
+Konfiguraatio: `03-configs/google/mcp-setup.md`
 
 ## Muistiinpanot
 

@@ -63,7 +63,7 @@ MCP-palvelimet asetetaan Devin-asetusten **MCP servers** -kohdassa. Projekti ei 
 | Palvelin | Käyttötarkoitus | Pakollisuus |
 |----------|----------------|-------------|
 | Supabase MCP | Tietokannan hallinta | Vain Supabase-projekteille |
-| gcloud / Google Storage | Firebase / GCP-toiminnot | Vain Google-projekteille |
+| Google Cloud MCP (gcloud + Cloud Storage) | Firebase / GCP-toiminnot | Vain Google-projekteille — katso `03-configs/google/mcp-setup.md` |
 
 ### Mitä EI asenneta globaalisti
 
@@ -131,5 +131,5 @@ Skillit ovat Devinin sisäänrakennettuja tietolähteitä jotka tarjoavat ohjeit
 
 ---
 
-**Päivitetty**: 2026-07-15  
-**Versio**: 1.1
+**Päivitetty**: 2026-07-16  
+**Versio**: 1.2
