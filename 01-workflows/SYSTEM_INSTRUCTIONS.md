@@ -41,6 +41,7 @@ cat 03-configs/ARCHITECTURE.md
 - Varmista Allow list: `git *`, `npm *`, `npx *`, `firebase *`
 - Varmista Auto execution: `Auto`
 - Aktivoi MCP-palvelimet projektin teknologioiden mukaan
+- **Jos projekti käyttää Supabasea tai Verceliä** ja vastaava MCP-työkalu puuttuu istunnosta → seuraa `01-workflows/mcp-auto-install.md` -ohjetta ja asenna MCP itse. Pyydä käyttäjää vain välttämättömiin kertatoimenpiteisiin (OAuth, PAT, restart).
 
 ## 1c. Työpuun omistajuuden tarkistus (Pakollinen)
 

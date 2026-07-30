@@ -19,6 +19,7 @@ Tämä kansio sisältää vaiheittaiset prosessit ja työnkulut.
 | `expo-vercel-web-deploy.md`     | Expo / react-native-web -sovelluksen julkaisu web-PWA:na Vercelillä |
 | `supabase-oauth-setup.md`       | OAuth-kirjautumisen asennus Supabaseen                              |
 | `vercel-github-troubleshoot.md` | Vercel + GitHub ongelmien debug (myös deploymentin korjaus)         |
+| `mcp-auto-install.md`          | MCP-palvelimien (Supabase/Vercel) automaattinen tarkistus ja asennus |
 
 ## Kun lisäät uuden workflowin
 
