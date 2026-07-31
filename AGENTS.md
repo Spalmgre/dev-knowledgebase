@@ -102,6 +102,7 @@ Käyttäjä: "Tämä Supabase RLS-ratkaisu pitää olla kaikissa projekteissa"
 - **Vercel deployment**: `03-configs/vercel/project-settings.md`
 - **Vercel ei deployaa**: `04-issues-resolved/vercel-github-trigger-2025-06-16.md`
 - **Git push -auto ei toimi**: `04-issues-resolved/git-push-vaatii-ide-allowlist-2026-06-23.md`
+- **Java/JDK puuttuu koneelta**: `04-issues-resolved/java-jdk-asennus-windows-2026-07-31.md`
 
 ---
 

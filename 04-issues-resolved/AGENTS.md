@@ -35,3 +35,4 @@ Jokaisessa dokumentissa pitää olla:
 | `git-push-vaatii-ide-allowlist-2026-06-23.md` | Git push -auto vaatii Devinin allowlistin (`git *`) |
 | `supabase-vercel-mcp-2026-07-09.md`           | Supabase & Vercel MCP -konfiguraatio puuttui           |
 | `vercel-eve-agent-framework-2026-07-16.md`    | EVE-agenttikehyksen arviointi ja käyttöönotto          |
+| `java-jdk-asennus-windows-2026-07-31.md`      | Java puuttui koneelta — JDK 21 asennus wingetillä      |
