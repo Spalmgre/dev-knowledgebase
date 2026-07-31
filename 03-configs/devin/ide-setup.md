@@ -6,51 +6,116 @@ Tämä tiedosto sisältää kaikki Devin/Cascade-asetukset jotka eivät kulje pr
 
 ---
 
-## Mistä asetukset löytyvät
+## Kaksi eri agenttia — tarkista kumpaa ajat
 
-1. Avaa Devin-asetukset: **Devin - Settings** → **Advanced Settings**
-2. Vasemmasta valikosta osio **Cascade** → **Configuration**
+| Agentti | Mistä tunnistat | Miten luvat asetetaan |
+|---------|-----------------|------------------------|
+| **Devin CLI (ACP)** — nykyinen | Chatissa näkyy permission mode ja `Shift+Tab` vaihtaa sitä | `config.json` → `permissions` + permission mode |
+| **Legacy Cascade** — vanha | Asetuksissa "Allow list" ja "Auto execution" | Devin - Settings → Advanced Settings → Cascade |
+
+**Tärkeää:** Devin CLI **ei lue** legacy Cascaden Allow listiä eikä `Auto execution` -asetusta. Jos ajat Devin CLI:tä, käytä alla olevaa permissions-mallia. Legacy-ohjeet ovat lopussa osiossa *Legacy Cascade*.
 
 ---
 
-## Pakolliset asetukset
+## Pakolliset asetukset (Devin CLI)
 
-### 1. Allow list (Auto-execute commands)
+### 1. Permission mode
 
-Lisää seuraavat patternit rivi kerrallaan:
+Vaihdetaan **`Shift+Tab`**illa tai slash-komennolla. Vaikuttaa vain nykyiseen istuntoon.
 
+| Tila | Tiedostomuokkaus | Terminaalikomennot |
+|------|------------------|--------------------|
+| `normal` | kysyy | kysyy |
+| `accept-edits` | auto (työtilassa) | kysyy |
+| `bypass` (`/bypass`) | auto | auto |
+| `autonomous` | kysyy | auto (vaatii `--sandbox`) |
+
+**Suositus pitkiin kehitysajoihin:** `bypass` yhdessä `deny`-listan kanssa. Ilman deny-listaa bypass antaa agentille vapaat kädet koko koneelle.
+
+### 2. Oletustila jokaiselle uudelle istunnolle
+
+Tiedosto `%APPDATA%\devin\User\settings.json`:
+
+```json
+"devin.acp.agentPreferences": {
+  "devin-cli": {
+    "mode": "bypass",
+    "model": "claude-opus-5-medium"
+  }
+}
 ```
-git *
-npm *
-npx *
-firebase *
+
+Ilman tätä jokainen uusi istunto alkaa oletustilassa ja `Shift+Tab` pitää muistaa erikseen.
+
+### 3. permissions-lista (allow / deny)
+
+Käyttäjätasolla `%APPDATA%\devin\config.json`, projektitasolla `<projekti>\.devin\config.json` (kulkee gitissä).
+
+Tarkistusjärjestys: **deny → ask → allow → oletus (kysy)**. Deny voittaa aina — **myös bypass-tilassa**. Siksi deny-lista on ainoa turvaverkko bypassia käytettäessä.
+
+Syntaksi on prefix-pohjainen: `Exec(git)` kattaa `git status`, `git commit -m "..."` jne. Älä lisää kapeita sääntöjä kuten `Exec(git status)` — ne ovat turhia ja lista paisuu käyttökelvottomaksi.
+
+Suositeltu projektipohja:
+
+```json
+{
+  "permissions": {
+    "allow": [
+      "Exec(npm)", "Exec(npx)", "Exec(node)", "Exec(git)", "Exec(gh)",
+      "Exec(firebase)", "Exec(gcloud)",
+      "Exec(Get-ChildItem)", "Exec(Get-Content)", "Exec(Select-String)",
+      "Exec(Test-Path)", "Exec(cd)",
+      "Write(C:\\TYO\\GitHub Local\\<projekti>\\**)"
+    ],
+    "deny": [
+      "Exec(Remove-Item)", "Exec(rm)", "Exec(rmdir)", "Exec(del)",
+      "Exec(git push --force)", "Exec(git reset --hard)", "Exec(git clean)",
+      "Write(**/.env)", "Write(**/.env.*)", "Write(**/.git/**)"
+    ]
+  }
+}
 ```
 
-Tämä sallii automaattisen suorituksen ilman "Run"-napin painamista.
+Varauma: deny on prefix-matchaava, joten se pysäyttää `Remove-Item -Recurse ...` mutta ei putkitettua muotoa `Get-ChildItem | Remove-Item`. Turvavyö, ei panssari — oikea suoja on tiheä commit-tahti.
 
-### 2. Auto execution
+### 4. Auto-continue (invocation limit)
 
-Aseta: **`Auto`**
+Tiedosto `%APPDATA%\devin\User\settings.json`:
 
-Turbo Mode ajaa kaikki komennot automaattisesti (myös vaaralliset). Älä käytä.
+```json
+"devin.autoContinue": 0
+```
 
-### 3. Auto-generate memories
+`0` tai negatiivinen = auto-continue **päällä** (agentti jatkaa rajattomasti). Positiivinen luku (oletus `40`) = agentti pysähtyy siihen määrään työkalukutsuja ja kysyy "jatketaanko". Vastaintuitiivinen: pienempi arvo = enemmän automaatiota.
+
+### 5. Auto-generate memories
 
 Aseta: **Päällä**
 
 Tallentaa tärkeän kontekstin automaattisesti.
 
-### 4. Auto-open edited files
+### 6. Auto-open edited files
 
 Aseta: **Päällä**
 
 Avaa muokatut tiedostot taustalla.
 
-### 5. Cascade in background
+### 7. Cascade in background
 
 Aseta: **Päällä**
 
 Mahdollistaa komentojen ajon kun vaihdat keskustelua.
+
+---
+
+## Legacy Cascade (vain jos ajat vanhaa agenttia)
+
+Nämä asetukset löytyvät: **Devin - Settings** → **Advanced Settings** → **Cascade** → **Configuration**.
+
+- **Allow list**: `git *`, `npm *`, `npx *`, `firebase *`
+- **Auto execution**: `Auto` (Turbo ajaa kaikki komennot, myös vaaralliset — älä käytä)
+
+Devin CLI ei lue näitä. Jos komennot kysyvät lupaa vaikka Allow list on kunnossa, ajat Devin CLI:tä ja korjaus on `permissions`-listassa (osio 3).
 
 ---
 
@@ -107,7 +172,9 @@ Skillit ovat Devinin sisäänrakennettuja tietolähteitä jotka tarjoavat ohjeit
 |------|-------|-------------------|
 | `AGENTS.md` | Projektikansiossa | Kyllä |
 | `.env` | Projektikansiossa (ei git) | Ei |
-| Devin Allow list | IDE / `%APPDATA%\devin\config.json` | Ei |
+| Devin `permissions` (käyttäjä) | `%APPDATA%\devin\config.json` | Ei |
+| Devin `permissions` (projekti) | `<projekti>\.devin\config.json` | Kyllä |
+| Permission mode -oletus | `%APPDATA%\devin\User\settings.json` | Ei |
 | MCP-palvelimet | IDE-asetukset | Ei |
 | Knowledgebase-ohjeet | `dev-knowledgebase` | Kyllä |
 
@@ -115,8 +182,9 @@ Skillit ovat Devinin sisäänrakennettuja tietolähteitä jotka tarjoavat ohjeit
 
 ## Nopea tarkistuslista uudelle projektille
 
-- [ ] Allow list: `git *`, `npm *`, `npx *`, `firebase *`
-- [ ] Auto execution: `Auto`
+- [ ] `<projekti>\.devin\config.json`: `permissions.allow` projektin toolchainille + `permissions.deny` tuhoaville komennoille
+- [ ] `%APPDATA%\devin\User\settings.json`: `mode` = `bypass` (tai `accept-edits` jos haluat vahvistaa komennot)
+- [ ] `%APPDATA%\devin\User\settings.json`: `devin.autoContinue` = `0`
 - [ ] Auto-generate memories: päällä
 - [ ] Auto-open edited files: päällä
 - [ ] Cascade in background: päällä
@@ -131,5 +199,5 @@ Skillit ovat Devinin sisäänrakennettuja tietolähteitä jotka tarjoavat ohjeit
 
 ---
 
-**Päivitetty**: 2026-07-16  
-**Versio**: 1.2
+**Päivitetty**: 2026-07-31  
+**Versio**: 2.0 (Devin CLI permission modet + `permissions`-lista; legacy Cascade -ohjeet siirretty omaan osioon)

@@ -32,7 +32,8 @@ Jokaisessa dokumentissa pitää olla:
 | Tiedosto                                      | Ongelma                                                |
 | --------------------------------------------- | ------------------------------------------------------ |
 | `vercel-github-trigger-2025-06-16.md`         | Vercel ei triggeröitynyt GitHub-pushista               |
-| `git-push-vaatii-ide-allowlist-2026-06-23.md` | Git push -auto vaatii Devinin allowlistin (`git *`) |
+| `git-push-vaatii-ide-allowlist-2026-06-23.md` | Git push -auto vaatii Devinin allowlistin (`git *`) — VAIN legacy Cascade |
+| `agentti-kysyy-lupaa-jokaiseen-komentoon-2026-07-31.md` | Agentti kysyy lupaa joka komentoon (permission mode + permissions-lista) |
 | `supabase-vercel-mcp-2026-07-09.md`           | Supabase & Vercel MCP -konfiguraatio puuttui           |
 | `vercel-eve-agent-framework-2026-07-16.md`    | EVE-agenttikehyksen arviointi ja käyttöönotto          |
 | `java-jdk-asennus-windows-2026-07-31.md`      | Java puuttui koneelta — JDK 21 asennus wingetillä      |

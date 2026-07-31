@@ -1,5 +1,10 @@
 # Git push vaatii napin painamisen (IDE allowlist)
 
+> **VANHENTUNUT nykyiselle agentille (2026-07-31).** Tämä ohje koskee **legacy
+> Cascadea**. Devin CLI (ACP) ei lue Cascaden Allow listiä eikä `Auto execution`
+> -asetusta — se käyttää `config.json` → `permissions` -osiota ja permission modeja.
+> Katso `04-issues-resolved/agentti-kysyy-lupaa-jokaiseen-komentoon-2026-07-31.md`.
+
 ## Ongelma
 
 Agentti (Cascade/Devin) ei aja `git add -A && git commit && git push` -komentoa
