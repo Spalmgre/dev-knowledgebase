@@ -63,6 +63,7 @@ Suositeltu projektipohja:
     "allow": [
       "Exec(npm)", "Exec(npx)", "Exec(node)", "Exec(git)", "Exec(gh)",
       "Exec(firebase)", "Exec(gcloud)",
+      "Exec(powershell)", "Exec(pwsh)",
       "Exec(Get-ChildItem)", "Exec(Get-Content)", "Exec(Select-String)",
       "Exec(Test-Path)", "Exec(cd)",
       "Write(C:\\TYO\\GitHub Local\\<projekti>\\**)"
@@ -77,6 +78,8 @@ Suositeltu projektipohja:
 ```
 
 Varauma: deny on prefix-matchaava, joten se pysäyttää `Remove-Item -Recurse ...` mutta ei putkitettua muotoa `Get-ChildItem | Remove-Item`. Turvavyö, ei panssari — oikea suoja on tiheä commit-tahti.
+
+**Wrapper-sudenkuoppa (v2.1):** Prefix-matchaus vertaa komennon alkua, joten mallin joskus tuottama kääre `powershell -Command "Get-Content ..."` **ei** matchaa `Exec(Get-Content)`-sääntöön — matchauksen kohde on sana `powershell`. Siksi pohjaan kuuluu `Exec(powershell)` ja `Exec(pwsh)`. Vastaavasti deny-lista ei suojaa wrapperin sisältä: `powershell -Command "Remove-Item ..."` menee läpi. Tämä on hyväksytty kompromissi — ks. `04-issues-resolved/powershell-command-kaare-estaa-prefix-match-2026-08-06.md`. Ohjeista mallia AGENTS.md:ssä kutsumaan komentoja suoraan ilman wrapperia (shell on jo PowerShell).
 
 ### 4. Auto-continue (invocation limit)
 
@@ -199,5 +202,5 @@ Skillit ovat Devinin sisäänrakennettuja tietolähteitä jotka tarjoavat ohjeit
 
 ---
 
-**Päivitetty**: 2026-07-31  
-**Versio**: 2.0 (Devin CLI permission modet + `permissions`-lista; legacy Cascade -ohjeet siirretty omaan osioon)
+**Päivitetty**: 2026-08-06  
+**Versio**: 2.1 (lisätty `Exec(powershell)`/`Exec(pwsh)` pohjaan + wrapper-sudenkuoppa-osio; v2.0: Devin CLI permission modet + `permissions`-lista)

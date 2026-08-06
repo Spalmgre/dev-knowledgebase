@@ -122,6 +122,8 @@ deny  →  ask  →  allow  →  oletus (kysy)
   - `03-configs/devin/ide-setup.md` → v2.0, legacy Cascade -ohjeet omaan osioon
 - Korvaa vanhentuneen ohjeen: `04-issues-resolved/git-push-vaatii-ide-allowlist-2026-06-23.md`
   (pätee edelleen legacy Cascadeen, ei Devin CLI:hin)
+- Jatkotapaus: `04-issues-resolved/powershell-command-kaare-estaa-prefix-match-2026-08-06.md`
+  (`powershell -Command`-kääreet rikkoivat prefix-matchauksen; bypass-oletus oli kadonnut)
 
 ## Avainsanat
 

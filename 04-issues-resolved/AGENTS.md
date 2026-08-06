@@ -37,3 +37,4 @@ Jokaisessa dokumentissa pitää olla:
 | `supabase-vercel-mcp-2026-07-09.md`           | Supabase & Vercel MCP -konfiguraatio puuttui           |
 | `vercel-eve-agent-framework-2026-07-16.md`    | EVE-agenttikehyksen arviointi ja käyttöönotto          |
 | `java-jdk-asennus-windows-2026-07-31.md`      | Java puuttui koneelta — JDK 21 asennus wingetillä      |
+| `powershell-command-kaare-estaa-prefix-match-2026-08-06.md` | `powershell -Command`-kääre rikkoi Exec-prefix-matchauksen; bypass-oletus kadonnut |
