@@ -55,6 +55,8 @@ Tarkistusjärjestys: **deny → ask → allow → oletus (kysy)**. Deny voittaa 
 
 Syntaksi on prefix-pohjainen: `Exec(git)` kattaa `git status`, `git commit -m "..."` jne. Älä lisää kapeita sääntöjä kuten `Exec(git status)` — ne ovat turhia ja lista paisuu käyttökelvottomaksi.
 
+**Fetch-säännöt (v2.2):** `webfetch`-työkalu kuuluu omaan Fetch-luokkaansa eikä sitä kata mikään `Exec(...)`-sääntö — ilman `Fetch(...)`-allow-sääntöä jokainen verkkosivun luku kysyy luvan tai estyy. Mallit noudattavat WHATWG URL Pattern -standardia: pelkkä `*` matchaa kaiken, ja yksi rivi `Fetch(https://*)` riittää. Suositus: lisää nämä **käyttäjätasolle** (`%APPDATA%\devin\config.json`), koska verkkohakujen tarve on projektiriippumaton. Ks. `04-issues-resolved/webfetch-lupa-estetty-2026-08-11.md`.
+
 Suositeltu projektipohja:
 
 ```json
@@ -66,6 +68,7 @@ Suositeltu projektipohja:
       "Exec(powershell)", "Exec(pwsh)",
       "Exec(Get-ChildItem)", "Exec(Get-Content)", "Exec(Select-String)",
       "Exec(Test-Path)", "Exec(cd)",
+      "Fetch(https://*)", "Fetch(http://*)",
       "Write(C:\\TYO\\GitHub Local\\<projekti>\\**)"
     ],
     "deny": [
@@ -202,5 +205,5 @@ Skillit ovat Devinin sisäänrakennettuja tietolähteitä jotka tarjoavat ohjeit
 
 ---
 
-**Päivitetty**: 2026-08-06  
-**Versio**: 2.1 (lisätty `Exec(powershell)`/`Exec(pwsh)` pohjaan + wrapper-sudenkuoppa-osio; v2.0: Devin CLI permission modet + `permissions`-lista)
+**Päivitetty**: 2026-08-13  
+**Versio**: 2.2 (lisätty `Fetch(https://*)`/`Fetch(http://*)` webfetch-lupia varten; v2.1: `Exec(powershell)`/`Exec(pwsh)` pohjaan + wrapper-sudenkuoppa-osio; v2.0: Devin CLI permission modet + `permissions`-lista)

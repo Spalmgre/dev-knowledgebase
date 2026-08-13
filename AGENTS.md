@@ -104,6 +104,7 @@ Käyttäjä: "Tämä Supabase RLS-ratkaisu pitää olla kaikissa projekteissa"
 - **Git push -auto ei toimi (legacy Cascade)**: `04-issues-resolved/git-push-vaatii-ide-allowlist-2026-06-23.md`
 - **Agentti kysyy lupaa joka komentoon**: `04-issues-resolved/agentti-kysyy-lupaa-jokaiseen-komentoon-2026-07-31.md`
 - **powershell -Command -kääre estää luvat**: `04-issues-resolved/powershell-command-kaare-estaa-prefix-match-2026-08-06.md`
+- **Webfetch estyi lupasäännöissä**: `04-issues-resolved/webfetch-lupa-estetty-2026-08-11.md`
 - **Java/JDK puuttuu koneelta**: `04-issues-resolved/java-jdk-asennus-windows-2026-07-31.md`
 
 ---

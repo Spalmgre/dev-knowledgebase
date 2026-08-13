@@ -38,3 +38,4 @@ Jokaisessa dokumentissa pitää olla:
 | `vercel-eve-agent-framework-2026-07-16.md`    | EVE-agenttikehyksen arviointi ja käyttöönotto          |
 | `java-jdk-asennus-windows-2026-07-31.md`      | Java puuttui koneelta — JDK 21 asennus wingetillä      |
 | `powershell-command-kaare-estaa-prefix-match-2026-08-06.md` | `powershell -Command`-kääre rikkoi Exec-prefix-matchauksen; bypass-oletus kadonnut |
+| `webfetch-lupa-estetty-2026-08-11.md` | Webfetch estyi lupasäännöissä — `Fetch(https://*)` allow-listaan |
