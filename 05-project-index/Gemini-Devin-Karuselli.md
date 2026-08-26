@@ -18,7 +18,7 @@
 ## Knowledgebase-yhteensopivuus
 
 **Knowledgebase-versio**: 1.0  
-**Viimeksi päivitetty**: 2026-08-26
+**Viimeksi päivitetty**: 2026-08-26 (v1.1.0)
 
 ### Noudatetut määritykset
 
@@ -50,14 +50,19 @@
 
 ## Asetukset
 
-- **Konfiguraatio**: `.env` (`GEMINI_API_KEY`, `DEVIN_API_KEY`, `POLL_INTERVAL_SECONDS`, `POLL_TIMEOUT_MINUTES`, `MAX_ITERATIONS`) — ei gitissä
+- **Versio**: 1.1.0 (2026-08-26) — Gemini 3.1 Pro -integraatio, end-to-end-ajo varmistettu
+- **Konfiguraatio**: `.env` (`GEMINI_API_KEY`, `GEMINI_MODEL`, `DEVIN_API_KEY`, `DEVIN_API_BASE`, `POLL_INTERVAL_SECONDS`, `POLL_TIMEOUT_MINUTES`, `MAX_ITERATIONS`) — ei gitissä
+- **Arkkitehtimalli**: `gemini-3.1-pro-preview`, luetaan `GEMINI_MODEL`-muuttujasta `GeminiArchitect.__init__`:ssa (load_dotenv-ajoitusvaatimuksen vuoksi)
 - **Devin permissions**: `.devin/config.json` (allow: python/pip/git/gh, deny: tuhoavat komennot + `.env`-kirjoitukset)
 
 ---
 
 ## Ratkaistut ongelmat (tässä projektissa)
 
-*(ei vielä dokumentoituja)*
+| Päivämäärä | Ongelma | Ratkaisu |
+|------------|---------|----------|
+| 2026-08-26 | Mallinimi oli kovakoodattu moduulitasolle, jossa `.env` ei ole vielä ladattu (`load_dotenv()` ajetaan `load_config()`:ssa vasta importtien jälkeen) | Env-luku siirretty `GeminiArchitect.__init__`:iin; `GEMINI_MODEL` + oletus `gemini-3.1-pro-preview` |
+| 2026-08-26 | `.env.bak` olisi voinut päätyä repoon `git add .`:n kautta (API-avainvuoto) | `*.bak` lisätty `.gitignore`:een |
 
 ---
 
