@@ -125,6 +125,14 @@ Devin CLI ei lue näitä. Jos komennot kysyvät lupaa vaikka Allow list on kunno
 
 ---
 
+## Projekti-ikkunan title bar -väri
+
+Jokaiselle projektille asetetaan oma tumma title bar -väri, jotta rinnakkaiset Devin-ikkunat erottuvat toisistaan. Asetus tehdään projektin `.vscode/settings.json`-tiedostoon `workbench.colorCustomizations`-avaimella (vain title bar, ei activity/status baria) ja commitoidaan gitiin — väri kulkee repon mukana.
+
+Värijako ja hex-arvot: `04-issues-resolved/projekti-ikkunakehys-varit-2026-08-27.md`. Uudelle projektille valitaan vapaa tumma sävy ja taulukko päivitetään.
+
+---
+
 ## MCP-palvelimet
 
 MCP-palvelimet asetetaan Devin-asetusten **MCP servers** -kohdassa. Projekti ei voi pakottaa näitä gitin kautta.
@@ -195,6 +203,7 @@ Skillit ovat Devinin sisäänrakennettuja tietolähteitä jotka tarjoavat ohjeit
 - [ ] Auto-open edited files: päällä
 - [ ] Cascade in background: päällä
 - [ ] MCP-palvelimet projektin teknologioiden mukaan
+- [ ] `.vscode/settings.json`: projektikohtainen title bar -väri (ks. `04-issues-resolved/projekti-ikkunakehys-varit-2026-08-27.md`)
 
 ---
 
@@ -205,5 +214,5 @@ Skillit ovat Devinin sisäänrakennettuja tietolähteitä jotka tarjoavat ohjeit
 
 ---
 
-**Päivitetty**: 2026-08-13  
-**Versio**: 2.2 (lisätty `Fetch(https://*)`/`Fetch(http://*)` webfetch-lupia varten; v2.1: `Exec(powershell)`/`Exec(pwsh)` pohjaan + wrapper-sudenkuoppa-osio; v2.0: Devin CLI permission modet + `permissions`-lista)
+**Päivitetty**: 2026-08-27  
+**Versio**: 2.3 (lisätty projekti-ikkunoiden title bar -värimääritys; v2.2: `Fetch(https://*)`/`Fetch(http://*)` webfetch-lupia varten; v2.1: `Exec(powershell)`/`Exec(pwsh)` pohjaan + wrapper-sudenkuoppa-osio; v2.0: Devin CLI permission modet + `permissions`-lista)
