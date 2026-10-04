@@ -27,8 +27,11 @@ Vaihdetaan **`Shift+Tab`**illa tai slash-komennolla. Vaikuttaa vain nykyiseen is
 |------|------------------|--------------------|
 | `normal` | kysyy | kysyy |
 | `accept-edits` | auto (työtilassa) | kysyy |
+| `smart` (`/smart`) | auto (työtilassa) | nopea malli arvioi; pakettiasennukset, mutatoivat git-komennot ja `rm`/`sudo` kysyvät aina |
 | `bypass` (`/bypass`) | auto | auto |
 | `autonomous` | kysyy | auto (vaatii `--sandbox`) |
+
+**Smart-tila** on uusi välivaihtoehto accept-editsin ja bypassin välissä: rutiininomainen kehitystyö (build, testit, lint) menee läpi ilman kyselyjä, mutta riskialttiimpiin kategorioihin se kysyy silti luvan. Jos haluat että agentti ei pysähdy **koskaan**, käytä bypassia — Smart ei sovi täysin vahtimattomaan ajoon. Huom: Smart-tilan julkaisu on porrastettu, eikä se välttämättä näy vielä kaikissa asennuksissa.
 
 **Suositus pitkiin kehitysajoihin:** `bypass` yhdessä `deny`-listan kanssa. Ilman deny-listaa bypass antaa agentille vapaat kädet koko koneelle.
 
@@ -46,6 +49,8 @@ Tiedosto `%APPDATA%\devin\User\settings.json`:
 ```
 
 Ilman tätä jokainen uusi istunto alkaa oletustilassa ja `Shift+Tab` pitää muistaa erikseen.
+
+**Huom — oletustila voi driiftautua:** jos tilaa vaihtaa istunnon aikana (`Shift+Tab`, `/plan`), valinta voi tarttua `settings.json`:iin uudeksi oletukseksi. Tämä on tapahtunut kahdesti (2026-08-06 ja 2026-10-04): bypass oli vaihtunut `plan`:iksi ja lupakyselyt palasivat. **Jos agentti alkaa taas kysellä lupia, tarkista ensimmäisenä** että `agentPreferences.devin-cli.mode` on edelleen `bypass` ennen kuin muutat permissions-listoja.
 
 ### 3. permissions-lista (allow / deny)
 
@@ -214,5 +219,5 @@ Skillit ovat Devinin sisäänrakennettuja tietolähteitä jotka tarjoavat ohjeit
 
 ---
 
-**Päivitetty**: 2026-08-27  
-**Versio**: 2.3 (lisätty projekti-ikkunoiden title bar -värimääritys; v2.2: `Fetch(https://*)`/`Fetch(http://*)` webfetch-lupia varten; v2.1: `Exec(powershell)`/`Exec(pwsh)` pohjaan + wrapper-sudenkuoppa-osio; v2.0: Devin CLI permission modet + `permissions`-lista)
+**Päivitetty**: 2026-10-04  
+**Versio**: 2.4 (Smart-tila mode-taulukkoon + muistutus oletustilan driifistä; v2.3: lisätty projekti-ikkunoiden title bar -värimääritys; v2.2: `Fetch(https://*)`/`Fetch(http://*)` webfetch-lupia varten; v2.1: `Exec(powershell)`/`Exec(pwsh)` pohjaan + wrapper-sudenkuoppa-osio; v2.0: Devin CLI permission modet + `permissions`-lista)

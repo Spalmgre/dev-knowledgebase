@@ -77,10 +77,20 @@ AGENTS.md-ohjeistus mallille: "Älä kääri komentoja `powershell -Command`iin 
 shell on jo PowerShell." Vähentää tapauksia mutta ei poista niitä kokonaan;
 siksi allow-sääntö on tarvittava varmuus.
 
+## Toistuminen: 2026-10-04
+
+Mode-driifti tapahtui toisen kerran: `%APPDATA%\devin\User\settings.json` →
+`agentPreferences.devin-cli.mode` oli jälleen `"plan"` (oli ollut `"bypass"`).
+Oireena agentti kyseli jatkuvasti etenemislupia ja uudet istunnot avautuivat
+Plan-tilaan. Korjaus oli sama: mode takaisin `"bypass"`:iin. Permissions-listat
+olivat tällä kertaa kunnossa koko ajan — eli jos lupakyselyt palaavat,
+**tarkista aina ensin mode** ennen listojen muokkausta. Muistutus driifistä
+lisätty `03-configs/devin/ide-setup.md`:ään (v2.4).
+
 ## Konteksti
 
 - Projekti: MelbAi-Hub (ratkaisu koskee kaikkia projekteja)
-- Päivämäärä: 2026-08-06
+- Päivämäärä: 2026-08-06 (toistunut 2026-10-04, ks. yllä)
 - Tehdyt muutokset:
   - `%APPDATA%\devin\User\settings.json` → `mode: "bypass"` (oli muuttunut `plan`:iksi)
   - `%APPDATA%\devin\config.json` → lisätty `Exec(powershell)`, `Exec(pwsh)`, `Exec(cmd)`
