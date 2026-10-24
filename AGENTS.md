@@ -108,6 +108,7 @@ Käyttäjä: "Tämä Supabase RLS-ratkaisu pitää olla kaikissa projekteissa"
 - **Webfetch estyi lupasäännöissä**: `04-issues-resolved/webfetch-lupa-estetty-2026-08-11.md`
 - **Java/JDK puuttuu koneelta**: `04-issues-resolved/java-jdk-asennus-windows-2026-07-31.md`
 - **Projekti-ikkunoiden title bar -värit**: `04-issues-resolved/projekti-ikkunakehys-varit-2026-08-27.md`
+- **iOS Safari long-press suurennuslasi + modaalin sulkeutuminen (RN Web/PWA)**: `04-issues-resolved/ios-safari-rnweb-longpress-loupe-2026-10-24.md`
 
 ---
 
