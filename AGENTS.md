@@ -91,6 +91,7 @@ Käyttäjä: "Tämä Supabase RLS-ratkaisu pitää olla kaikissa projekteissa"
 - **System instructions**: `01-workflows/SYSTEM_INSTRUCTIONS.md`
 - **Workflow rules**: `01-workflows/workflow-rules.md`
 - **Plan-tilan kysymykset kerralla**: `01-workflows/plan-mode-questions-batch.md`
+- **viimeksi.md sessio-muistio ("tauko"-triggeri)**: `01-workflows/viimeksi-muistio.md`
 - **Expo → Vercel web PWA**: `01-workflows/expo-vercel-web-deploy.md`
 - **Arkkitehtuuri**: `03-configs/ARCHITECTURE.md`
 - **UI/UX standardit**: `03-configs/UI_UX_STANDARDS.md`

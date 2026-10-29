@@ -57,6 +57,10 @@ git status --short
 - Raportoi lopuksi omasta commitista pois jääneet lähtötilan muutokset, mutta jätä ne koskematta. Tämä ei vaadi käyttäjältä erillistä päätöstä.
 - Tarkka staging- ja commit-menettely on `01-workflows/workflow-rules.md`-tiedostossa.
 
+## 1d. viimeksi.md — sessio-muistio ("tauko"-triggeri)
+
+**Jokaisen projektin juuressa on oma `viimeksi.md`.** Kun käyttäjä kirjoittaa **"tauko"**, päivitä se heti: kesken jäänyt työ → KESKEN-osio (kuvaus — status — seuraava askel), valmistunut → historiaan. Koko konventio (rakenne, seedaus, käyttöönotto): `01-workflows/viimeksi-muistio.md`.
+
 ## 2. Projektikohtainen Alustus
 
 ```bash

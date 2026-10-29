@@ -20,6 +20,7 @@ Tämä kansio sisältää vaiheittaiset prosessit ja työnkulut.
 | `supabase-oauth-setup.md`       | OAuth-kirjautumisen asennus Supabaseen                              |
 | `vercel-github-troubleshoot.md` | Vercel + GitHub ongelmien debug (myös deploymentin korjaus)         |
 | `mcp-auto-install.md`          | MCP-palvelimien (Supabase/Vercel) automaattinen tarkistus ja asennus |
+| `viimeksi-muistio.md`          | viimeksi.md sessio-muistio kaikissa projekteissa ("tauko"-triggeri)   |
 
 ## Kun lisäät uuden workflowin
 
