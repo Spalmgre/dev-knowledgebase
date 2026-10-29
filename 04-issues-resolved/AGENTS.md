@@ -40,3 +40,4 @@ Jokaisessa dokumentissa pitää olla:
 | `powershell-command-kaare-estaa-prefix-match-2026-08-06.md` | `powershell -Command`-kääre rikkoi Exec-prefix-matchauksen; bypass-oletus kadonnut |
 | `webfetch-lupa-estetty-2026-08-11.md` | Webfetch estyi lupasäännöissä — `Fetch(https://*)` allow-listaan |
 | `ios-safari-rnweb-longpress-loupe-2026-10-24.md` | iOS Safari/PWA: suurennuslasi blokkaa long-pressin + modaali sulkeutuu kenttää napauttaessa (RN Web) |
+| `devin-cli-auth-redirect-vercel-plugin-2026-10-29.md` | Devin CLI:n OAuth-loopback rikki; Vercel-plugin asennettu Desktopin Customize → Plugins -näkymästä ilman CLI:ää |

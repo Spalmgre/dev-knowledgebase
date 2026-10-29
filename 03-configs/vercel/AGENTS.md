@@ -10,6 +10,7 @@ Toimivat Vercel-asetukset ja -määritykset.
 | `environment-variables.md` | Required env-muuttujat |
 | `mcp-setup.md` | MCP-integraatio tekoälyagenteille + suora REST API -varavaihtoehto |
 | `eve-agent-framework.md` | EVE-agenttiprojektien arviointi, alustus, rakenne ja tuotantoperiaatteet |
+| `vercel-plugin-2026-10-29.md` | Vercel-plugin globaalisti asennettuna (Personal scope): skills + MCP automaattisesti kaikissa sessioissa |
 
 ## Käyttö
 
