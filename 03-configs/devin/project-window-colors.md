@@ -41,10 +41,11 @@ Vaihda hex-värit projektin omaksi värjäksi.
 
 | Projekti | Väri | Hex |
 |----------|------|-----|
-| MelbAi-Hub | Violetti | `#9B6AFF` |
-| Klack-SaaS-Chat | Tummanpunainen / oranssi | `#7c2d12` |
-| Klack-Treeni | Tummanvihreä | `#1a472a` |
-| Melba-CRM-Talk | Ruskea / kultainen | `#713f12` |
+| MelbAi-Hub | Keltainen | `#8A6D1A` |
+| dev-knowledgebase | Vihreä | `#24432E` |
+| Klack-Treeni | Oranssi | `#5A3A1E` |
+| Gemini Devin Karuselli | Keltainen (himmeä) | `#5C4D1E` |
+| MyBrainSP | Sininen | `#1F3B57` |
 | Uusi projekti | Valitse erottuva väri | — |
 
 ---

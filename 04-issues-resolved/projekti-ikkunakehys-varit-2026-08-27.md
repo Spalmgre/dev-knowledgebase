@@ -37,10 +37,13 @@ Käytännön huomiot:
 
 | Projekti | Väri | active | inactive |
 |----------|------|--------|----------|
-| MelbAi-Hub | Sininen | `#1F3B57` | `#16293C` |
+| MelbAi-Hub | Keltainen | `#8A6D1A` | `#5F4B13` |
 | dev-knowledgebase | Vihreä | `#24432E` | `#1A3221` |
 | Klack-Treeni | Oranssi | `#5A3A1E` | `#402A16` |
 | Gemini Devin Karuselli | Keltainen | `#5C4D1E` | `#423718` |
+| MyBrainSP | Sininen | `#1F3B57` | `#16293C` |
+
+Päivitys 2026-10-31: MelbAi-Hub vaihdettiin sinisestä (`#1F3B57`) keltaiseksi (`#8A6D1A`, kirkkaampi sävy kuin Karusellin `#5C4D1E`, jotta ne erottuvat). MelbAi-Hubin vapautunut sininen siirtyi MyBrainSPlle.
 
 Uudelle projektille: valitse vapaa tumma sävy joka ei ole jo käytössä, ja päivitä tämä taulukko.
 
