@@ -1,4 +1,5 @@
 {
+  // dev-knowledgebase — vihreä title bar
   "workbench.colorCustomizations": {
     "titleBar.activeBackground": "#24432E",
     "titleBar.activeForeground": "#E6E6E6",

@@ -28,6 +28,8 @@ Malli (esim. tumma sininen):
 
 Käytännön huomiot:
 
+- **KRIITTINEN (löydetty 2026-11-01):** jos projektikansiossa on `.code-workspace`-tiedosto ja ikkuna avataan sen kautta, window-scopen asetukset (kuten `workbench.colorCustomizations`) luetaan **vain workspace-tiedoston `settings`-lohkosta** — `.vscode/settings.json` ohitetaan kokonaan. Säilytä samat värit molemmissa (kommentti "pidä synkassa" kertoo kaksoiskappaleen). Projekteissa joilla on workspace-tiedosto: MelbAi-Hub, Klack-Treeni, Klack-SaaS-Chat. Ilman workspace-tiedostoa: dev-knowledgebase, MyBrainSP, Gemini Devin Karuselli.
+- MelbAi-Hubissa `Klack-Treeni.code-workspace` on vahingossa nimetty Klack-Treeniksi (kopio) — tiedostonimi säilytetty, mutta sisäinen `"name"` korjattu MelbAi-Hubiksi 2026-11-01.
 - Värjättiin **vain title bar** — ei activity/status baria, jotta musta teema säilyy muuten puhtaana.
 - Inactive-sävy on hieman tummempi kuin active (n. 75 % kirkkaudesta), jotta fokusoitu ikkuna erottuu.
 - Vaikutus on välitön tiedoston tallennuksesta — ei uudelleenkäynnistystä.
