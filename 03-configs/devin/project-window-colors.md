@@ -54,9 +54,16 @@ Vaihda hex-värit projektin omaksi värjäksi.
 
 ## Prompt muiden projektien asettamiseen
 
-Käytä tätä promptia agentille:
+**Tärkeä rajoitus (varmistettu 2026-11-01):** title bar -väri on ikkunatason workspace-asetus. Väri NAKYY vain kun (a) tiedosto on projektin omalla levypolulla ja (b) kyseisen projektin OMA ikkuna on ladattu uudelleen. Toinen agentti-ikkuna ei voi pakottaa toisen ikkunan reloadia — prompti täytyy ajaa projektin omassa ikkunassa.
 
-> "Aseta tämän projektin Devin-ikkunan kehysväri. Käytä värinä `[väri / hex]`. Muokkaa `.vscode/settings.json` ja lisää `workbench.colorCustomizations`. Ota mallia knowledgebase-dokumentista `03-configs/devin/project-window-colors.md`. Varmista että sekä titleBar, activityBar että statusBar saavat värin. Commitoi ja pushaa muutos."
+Käytä tätä promptia projektin omassa agentti-ikkunassa:
+
+> "Tarkista ja korjaa tämän projektin title bar -väri knowledgebase-ohjeiden mukaan:
+> 1. Raportoi ensin ikkunan työtilajuuri (`pwd` + Explorerin juurikansio). Jos se EI ole `C:\TYO\GitHub Local\<tämä projekti>`, kerro se ja LOPETA — asetuksia ajetaan silloin väärään paikkaan.
+> 2. Lue `C:\TYO\GitHub Local\dev-knowledgebase\03-configs\devin\project-window-colors.md` ja `04-issues-resolved\projekti-ikkunakehys-varit-2026-08-27.md` — väri ja aktiivinen/inaktiivinen-sävy taulukosta.
+> 3. Varmista että `workbench.colorCustomizations` on TÄYSIN SAMA kaikissa näistä joita projektissa on: `.vscode/settings.json` JA `*.code-workspace`:n `settings`-lohko (.code-workspace ohittaa .vscode:n kokonaan).
+> 4. Commitoi ja pushaa oman repon sääntöjen mukaan.
+> 5. Lopuksi ohjeista minua ajamaan Command Palette → Developer: Reload Window."
 
 ---
 
