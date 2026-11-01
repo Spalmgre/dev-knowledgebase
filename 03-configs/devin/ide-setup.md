@@ -208,7 +208,7 @@ Skillit ovat Devinin sisäänrakennettuja tietolähteitä jotka tarjoavat ohjeit
 - [ ] Auto-open edited files: päällä
 - [ ] Cascade in background: päällä
 - [ ] MCP-palvelimet projektin teknologioiden mukaan
-- [ ] `.vscode/settings.json`: projektikohtainen title bar -väri (ks. `04-issues-resolved/projekti-ikkunakehys-varit-2026-08-27.md`)
+- [ ] `.vscode/settings.json` (+ `*.code-workspace` jos on): projektikohtainen title bar -väri — värin tulee myös jo avoinna olevan agentti-ikkunan Devin-snapshotiin (`%APPDATA%\devin\Workspaces\<id>\workspace.json`), ks. `03-configs/devin/project-window-colors.md`
 
 ---
 

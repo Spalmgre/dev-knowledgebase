@@ -56,6 +56,10 @@ Jos projekti tarvitsee offline-kopion määrityksistä, kopioi luettujen dokumen
 3. Avaa kansio VS Code:ssa uutena ikkunana
 4. **Tarkista että projektin juuren `AGENTS.md` sisältää pakollisen knowledgebase-alustusosion** (hae `git pull origin main` ja viittaukset `dev-knowledgebase/`-tiedostoihin)
 5. Luo `README.md` projektin kuvauksella
+6. **Aseta projektikohtainen title bar -väri** (ohje ja vapaat sävyt: `03-configs/devin/project-window-colors.md`):
+   - Valitse vapaa erottuva sävy ja päivitä sen väritaulukko + `04-issues-resolved/projekti-ikkunakehys-varit-2026-08-27.md`
+   - Kirjoita `workbench.colorCustomizations` tiedostoon `.vscode/settings.json` JA `*.code-workspace` (jos sellainen on) — kommentilla projektin nimi
+   - **Agentti-ikkunat:** Devin Desktop lukee värin omasta workspace-snapshotistaan (`%APPDATA%\devin\Workspaces\<id>\workspace.json`), joka tehdään ikkunan luontihetkellä. Repo-väri riittää uusille ikkunoille; jos ikkuna on jo olemassa, kirjoita sama väri myös sen snapshot-tiedostoon ja reloadaa ikkuna
 
 ### Tarkistus:
 
@@ -63,6 +67,7 @@ Jos projekti tarvitsee offline-kopion määrityksistä, kopioi luettujen dokumen
 - [ ] VS Code avattu oikeassa kansiossa
 - [ ] `AGENTS.md` sisältää pakollisen knowledgebase-alustusosion
 - [ ] README.md luotu
+- [ ] Title bar -väri asetettu, väritaulukot päivitetty knowledgebaseen
 
 ---
 
