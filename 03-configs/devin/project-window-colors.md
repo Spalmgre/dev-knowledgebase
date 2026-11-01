@@ -35,7 +35,7 @@ Luo tai muokkaa projektin tiedostoa `.vscode/settings.json` ja lisää:
 
 Vaihda hex-värit projektin omaksi värjäksi.
 
-> **Tärkeä varoitus (.code-workspace):** jos projektissa on `.code-workspace`-tiedosto, sen `settings`-lohko ohittaa `.vscode/settings.json`:n ikkunatason asetukset — väri täytyy lisätä MOLEMPIIN. Projekteissa joilla on workspace-tiedosto: MelbAi-Hub, Klack-Treeni, Klack-SaaS-Chat. Ks. yksityiskohdat: `04-issues-resolved/projekti-ikkunakehys-varit-2026-08-27.md`.
+> **Tärkeä varoitus (ratkaistu 2026-11-01):** Devin Desktopin agentti-ikkumat lukevat värin omasta snapshotistaan: `%APPDATA%\devin\Workspaces\<id>\workspace.json` → `settings.workbench.colorCustomizations`. Snapshot tehdään ikkunan luontihetkellä. Jos väri lisätään repoon myöhemmin, se ei ilmesty vanhaan ikkunaan — kirjoita väri suoraan projektille kuuluvaan `Workspaces/<id>/workspace.json`-tiedostoon (id löytyy kansion `folders[0].path`-kentästä) ja reloadaa ikkuna. Periaate ja diagnosointi: `04-issues-resolved/projekti-ikkunakehys-varit-2026-08-27.md`.
 
 ---
 
