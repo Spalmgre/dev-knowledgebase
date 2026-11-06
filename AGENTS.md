@@ -96,6 +96,7 @@ Käyttäjä: "Tämä Supabase RLS-ratkaisu pitää olla kaikissa projekteissa"
 - **Arkkitehtuuri**: `03-configs/ARCHITECTURE.md`
 - **UI/UX standardit**: `03-configs/UI_UX_STANDARDS.md`
 - **MCP integraatio**: `03-configs/MCP_INTEGRATION.md`
+- **Dokumentaatiostandardi (versio, AGENTS.md, HANDOVER.md, dumpit)**: `03-configs/documentation-standard.md`
 - **MCP automaattinen asennus**: `01-workflows/mcp-auto-install.md`
 - **Supabase MCP**: `03-configs/supabase/mcp-setup.md`
 - **Supabase OAuth**: `03-configs/supabase/oauth-providers.md`
