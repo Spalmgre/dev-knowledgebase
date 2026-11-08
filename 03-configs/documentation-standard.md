@@ -13,7 +13,9 @@ Tämä dokumentti määrittelee yhtenäiset dokumentaatiokäytännöt, jotka ova
 | **Versio** | Sovelluksen `VERSION`-vakio (koodissa) + maininta HANDOVER.md:ssä | Jokaisessa deployssa ja jokaisen julkaistavan version kohdalla |
 | **AGENTS.md** | Projekti juuressa + lähin AGENTS.md kansiokohtaisesti | Jokaisen valmistuneen featuren jälkeen |
 | **HANDOVER.md** | Projektin juuressa | Jokaisen merkittävän vaiheen valmistuttua: nykytila, korjatut bugit, tunnetut rajoitteet, seuraavat askeleet |
-| **Kaksi dumppia** | `docs/dump/ARCHITECTURE_DUMP.md` + `docs/dump/UI_UX_DUMP.md` | Aina kun versiota nostetaan — **samassa commitissa** kuin versiotarkennus (ja lisäksi ennen jokaista julkaisua) |
+| **Kaksi dumppia** | `docs/dumps/ARCHITECTURE_DUMP.md` + `docs/dumps/UI_UX_DUMP.md` | Aina kun versiota nostetaan — **samassa commitissa** kuin versiotarkennus (ja lisäksi ennen jokaista julkaisua) |
+
+**Nimeämisstandardi (ratkaistu 2026-11-08):** dump-kansio on aina `docs/dumps/` (monikko), agenttiohjetiedosto aina `AGENTS.md` (isoilla). Racassa on ollut variaatioita (`docs/dump`, `agents.md`, `agent.md`) — ne yhdenmukaistettiin kaikissa projekteissa tähän muotoon.
 
 ### Perustelut
 
@@ -25,7 +27,7 @@ Tämä dokumentti määrittelee yhtenäiset dokumentaatiokäytännöt, jotka ova
 ### Projektikohtaiset variaatiot
 
 - MelbAi-Hub: dumpit **generoidaan** (`npm run generate-dumps`) — niitä ei koskaan muokata käsin; eivät ole osa `npm run verify`ä eikä kunkin commitin gatea.
-- MyBrainSP: dumpit ylläpidetään käsin samassa commitissa versionnoston kanssa (`docs/dump/`), lisäksi loppuraportti `### LOPPURAPORTTI – VAIHE X VALMIS` Markdown-koodilohkona.
+- MyBrainSP: dumpit ylläpidetään käsin samassa commitissa versionnoston kanssa (`docs/dumps/`), lisäksi loppuraportti `### LOPPURAPORTTI – VAIHE X VALMIS` Markdown-koodilohkona.
 - Uudet projektit valitsevat mallin (generoidut vs käsin) ja kirjataan valinta omaan AGENTS.md:hen.
 
 ---
@@ -45,9 +47,9 @@ Yhtenäistä tämän projektin dokumentaatiokäytäntö knowledgebase-standardin
    - Lähin AGENTS.md päivitetään jokaisen featuren valmistuttua
    - HANDOVER.md juuressa päivitetään merkittävien vaiheiden yhteydessä:
      nykytila, korjatut bugit, tunnetut rajoitteet, seuraavat askeleet
-   - docs/dump/ARCHITECTURE_DUMP.md ja docs/dump/UI_UX_DUMP.md päivitetään
+   - docs/dumps/ARCHITECTURE_DUMP.md ja docs/dumps/UI_UX_DUMP.md päivitetään
      aina versionnoston yhteydessä samassa commitissa
-4. Luo puuttuvat tiedostot (HANDOVER.md, docs/dump/) mallin mukaan, jos niitä ei ole.
+4. Luo puuttuvat tiedostot (HANDOVER.md, docs/dumps/) mallin mukaan, jos niitä ei ole.
 5. Commitoi ja pushaa oman repon sääntöjen mukaan.
 ```
 
