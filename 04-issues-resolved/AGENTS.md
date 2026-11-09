@@ -41,3 +41,4 @@ Jokaisessa dokumentissa pitää olla:
 | `webfetch-lupa-estetty-2026-08-11.md` | Webfetch estyi lupasäännöissä — `Fetch(https://*)` allow-listaan |
 | `ios-safari-rnweb-longpress-loupe-2026-10-24.md` | iOS Safari/PWA: suurennuslasi blokkaa long-pressin + modaali sulkeutuu kenttää napauttaessa (RN Web) |
 | `devin-cli-auth-redirect-vercel-plugin-2026-10-29.md` | Devin CLI:n OAuth-loopback rikki; Vercel-plugin asennettu Desktopin Customize → Plugins -näkymästä ilman CLI:ää |
+| `loppuraportti-koodilohko-2026-11-08.md`             | Loppuraportti aina yhtenä kopioitavana tekstikoodilohkona (KOPIOI-markerit) |

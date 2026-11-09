@@ -17,6 +17,10 @@ Tämä dokumentti määrittelee yhtenäiset dokumentaatiokäytännöt, jotka ova
 
 **Nimeämisstandardi (ratkaistu 2026-11-08):** dump-kansio on aina `docs/dumps/` (monikko), agenttiohjetiedosto aina `AGENTS.md` (isoilla). Racassa on ollut variaatioita (`docs/dump`, `agents.md`, `agent.md`) — ne yhdenmukaistettiin kaikissa projekteissa tähän muotoon.
 
+### Pakollinen loppuraportti
+
+- **Pakollinen loppuraportti (knowledgebase-standardi):** Jokaisen valmistuvan vaiheen/tehtävän päätteeksi kirjoita yksi kopioitava loppuraportti tekstikoodilohkona (```` ```text ... ``` ````) markerien `=== KOPIOI TÄSTÄ ALKAEN ===` ja `=== KOPIOI TÄHÄN ASTI ===` väliin. Sisältö: LOPPURAPORTTI-otsikko, commit-hash, testitulokset taulukkona, yhteenveto, seuraavat askeleet. Ohitetaan vain käyttäjän nimenomaisesta pyynnöstä (esim. "vastaa lyhyesti"). Tausta ja esimerkkimuoto: `04-issues-resolved/loppuraportti-koodilohko-2026-11-08.md`.
+
 ### Perustelut
 
 - **Versio** kertoo käyttäjälle ja agenteille mikä versio on missäkin ajossa (MelbAi-Hub: `const VERSION` App.jsx:ssä; MyBrainSP: `npm run status` näyttää v1.00+).
@@ -27,7 +31,7 @@ Tämä dokumentti määrittelee yhtenäiset dokumentaatiokäytännöt, jotka ova
 ### Projektikohtaiset variaatiot
 
 - MelbAi-Hub: dumpit **generoidaan** (`npm run generate-dumps`) — niitä ei koskaan muokata käsin; eivät ole osa `npm run verify`ä eikä kunkin commitin gatea.
-- MyBrainSP: dumpit ylläpidetään käsin samassa commitissa versionnoston kanssa (`docs/dumps/`), lisäksi loppuraportti `### LOPPURAPORTTI – VAIHE X VALMIS` Markdown-koodilohkona.
+- MyBrainSP: dumpit ylläpidetään käsin samassa commitissa versionnoston kanssa (`docs/dumps/`).
 - Uudet projektit valitsevat mallin (generoidut vs käsin) ja kirjataan valinta omaan AGENTS.md:hen.
 
 ---
@@ -62,9 +66,10 @@ Yhtenäistä tämän projektin dokumentaatiokäytäntö knowledgebase-standardin
 - [ ] AGENTS.md sisältää neljä pakollista dokumentaatiokäytäntöä
 - [ ] HANDOVER.md olemassa ja ajantasainen
 - [ ] Dump-tiedostot olemassa tai malli (generointi/käsin) valittu ja kirjattu AGENTS.md:hen
+- [ ] Pakollinen loppuraportti (KOPIOI-merkit + koodilohko) kirjattu projektin AGENTS.md:hen
 - [ ] Versiokäytäntö koodattu (VERSION-vakio) ja testattu
 
 ---
 
-**Päivitetty**: 2026-11-06
-**Versio**: 1.0
+**Päivitetty**: 2026-11-09
+**Versio**: 1.1 (pakollinen loppuraportti nostettu globaaliksi standardiksi)
