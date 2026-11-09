@@ -42,3 +42,4 @@ Jokaisessa dokumentissa pitää olla:
 | `ios-safari-rnweb-longpress-loupe-2026-10-24.md` | iOS Safari/PWA: suurennuslasi blokkaa long-pressin + modaali sulkeutuu kenttää napauttaessa (RN Web) |
 | `devin-cli-auth-redirect-vercel-plugin-2026-10-29.md` | Devin CLI:n OAuth-loopback rikki; Vercel-plugin asennettu Desktopin Customize → Plugins -näkymästä ilman CLI:ää |
 | `loppuraportti-koodilohko-2026-11-08.md`             | Loppuraportti aina yhtenä kopioitavana tekstikoodilohkona (KOPIOI-markerit) |
+| `nul-tiedosto-git-bash-redirect-2026-11-09.md`       | `nul`-tiedosto syntyy `2>nul`-redirectistä Git Bashissa; esto globaalilla säännöllä + kirurginen nul-clean-apuri |

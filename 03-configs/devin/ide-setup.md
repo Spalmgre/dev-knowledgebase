@@ -87,6 +87,8 @@ Suositeltu projektipohja:
 
 Varauma: deny on prefix-matchaava, joten se pysäyttää `Remove-Item -Recurse ...` mutta ei putkitettua muotoa `Get-ChildItem | Remove-Item`. Turvavyö, ei panssari — oikea suoja on tiheä commit-tahti.
 
+**nul-poikkeus (v2.5):** Hyväksytyt deny-estetyt poistot vievät myös agentin kyvyn siivota vahinkotiedostoja, koska allow ei voi tehdä poikkeusta denyyn eikä prefix-matchaus erottele argumentteja. Tähän on yksi kirurginen poikkeus: apuri `~/.devin/bin/nul-clean.js` (poistaa vain `nul`-nimisen tiedoston), jonka eksplisiittinen allow-rivi `"Exec(node C:/Users/stefa/.devin/bin/nul-clean.js)"` on kirjattu käyttäjän config.json:iin. Esto ja tausta: `04-issues-resolved/nul-tiedosto-git-bash-redirect-2026-11-09.md`.
+
 **Wrapper-sudenkuoppa (v2.1):** Prefix-matchaus vertaa komennon alkua, joten mallin joskus tuottama kääre `powershell -Command "Get-Content ..."` **ei** matchaa `Exec(Get-Content)`-sääntöön — matchauksen kohde on sana `powershell`. Siksi pohjaan kuuluu `Exec(powershell)` ja `Exec(pwsh)`. Vastaavasti deny-lista ei suojaa wrapperin sisältä: `powershell -Command "Remove-Item ..."` menee läpi. Tämä on hyväksytty kompromissi — ks. `04-issues-resolved/powershell-command-kaare-estaa-prefix-match-2026-08-06.md`. Ohjeista mallia AGENTS.md:ssä kutsumaan komentoja suoraan ilman wrapperia (shell on jo PowerShell).
 
 ### 4. Auto-continue (invocation limit)
@@ -219,5 +221,5 @@ Skillit ovat Devinin sisäänrakennettuja tietolähteitä jotka tarjoavat ohjeit
 
 ---
 
-**Päivitetty**: 2026-10-04  
-**Versio**: 2.4 (Smart-tila mode-taulukkoon + muistutus oletustilan driifistä; v2.3: lisätty projekti-ikkunoiden title bar -värimääritys; v2.2: `Fetch(https://*)`/`Fetch(http://*)` webfetch-lupia varten; v2.1: `Exec(powershell)`/`Exec(pwsh)` pohjaan + wrapper-sudenkuoppa-osio; v2.0: Devin CLI permission modet + `permissions`-lista)
+**Päivitetty**: 2026-11-09
+**Versio**: 2.5 (nul-tiedostojen esto + kirurginen nul-clean-apuri deny-listan rinnalle; v2.4: Smart-tila mode-taulukkoon + muistutus oletustilan driifistä; v2.3: lisätty projekti-ikkunoiden title bar -värimääritys; v2.2: `Fetch(https://*)`/`Fetch(http://*)` webfetch-lupia varten; v2.1: `Exec(powershell)`/`Exec(pwsh)` pohjaan + wrapper-sudenkuoppa-osio; v2.0: Devin CLI permission modet + `permissions`-lista)
