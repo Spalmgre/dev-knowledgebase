@@ -43,6 +43,12 @@ MyBrainSP-projektissa (v1.00→v1.20-sessiot) sääntö tuli AGENTS.md:n toimint
 
 Jotta promptia ei tarvitse toistaa joka sessiossa, lisää sääntö projektin omaan `AGENTS.md`-tiedostoon (vrt. MyBrainSP:n "Vuoron päättäminen (Pakollinen loppuraportti)" -kappale). Pysyvä muoto: `03-configs/documentation-standard.md` → "Pakollinen loppuraportti".
 
+## Tallennuspaikat
+
+- Devin (globaali, kaikki projektit): `~/.devin/global_rules.md` — osio "Pakollinen loppuraportti (koodituotanto)" (lisätty 2026-11-09)
+- Projekteilla: kunkin projektin oma `AGENTS.md`
+- Pysyvä standardi: `03-configs/documentation-standard.md`
+
 ## Avainsanat
 
 loppuraportti, koodilohko, kopioi tästä, report block, agentti vastausmuoto
