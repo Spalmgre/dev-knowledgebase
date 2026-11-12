@@ -44,6 +44,7 @@ dev-knowledgebase/
 | Projektin nimi  | Tyyppi | Status     |
 | --------------- | ------ | ---------- |
 | Klack-SaaS-Chat | Web    | Aktiivinen |
+| Klack-SDD       | Desktop/Local Web | Kehitys |
 | Klack-Treeni    | Web    | Aktiivinen |
 | Klack-Web       | Web    | Aktiivinen |
 | Melba-CRM-Talk  | Web    | Aktiivinen |
