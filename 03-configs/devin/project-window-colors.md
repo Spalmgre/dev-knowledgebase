@@ -49,6 +49,7 @@ Vaihda hex-värit projektin omaksi värjäksi.
 | Gemini Devin Karuselli | Keltainen (himmeä) | `#5C4D1E` |
 | MyBrainSP | Sininen | `#1F3B57` |
 | Klack-SDD | Viininpunainen | `#5A1E2E` |
+| Klack-Tehdas | Turkoosi/petrooli | `#1E4A47` |
 | Uusi projekti | Valitse erottuva väri | — |
 
 ---

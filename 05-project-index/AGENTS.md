@@ -14,6 +14,7 @@ Projektikohtaiset tiedot ja linkit.
 |----------|----------------|--------|--------|
 | `Klack-SaaS-Chat.md` | Klack SaaS Chat | Web | Aktiivinen |
 | `Klack-SDD.md` | Klack-SDD | Desktop/Local Web | Kehitys |
+| `Klack-Tehdas.md` | Klack-Tehdas | Desktop/Local Agentti (AI Second Brain) | Kehitys |
 | `Klack-Treeni.md` | Klack Treeni | Web | Aktiivinen |
 | `Klack-Web.md` | Klack Web | Web | Aktiivinen |
 | `Melba-CRM-Talk.md` | Melba CRM Talk | Web | Aktiivinen |
